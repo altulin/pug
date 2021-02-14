@@ -1,0 +1,46 @@
+// visually-hidden
+@mixin vh()
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: none
+  padding: 0
+  clip: rect(0, 0, 0, 0)
+  overflow: hidden
+
+@function rem($size)
+  @return ($size  / 16)+rem
+
+// Media mixin
+@mixin mw($width)
+    @media screen and (max-width: $width + 'px')
+        @content;
+
+// Font mixin
+@mixin font-load($name, $size, $weight, $style)
+    @font-face
+        font-family: $name
+        src: url('../fonts/'+ $name + '-'+ $size + '.woff2') format('woff2')
+        src: url('../fonts/'+ $name + '-'+ $size + '.woff') format('woff')
+        font-weight: $weight
+        font-style: $style
+        font-display: swap
+
+@mixin font($name)
+  font-family: $name, "Arial", sans-serif
+
+
+// Position mixin
+@mixin centered($axis: 'both')
+    position: absolute
+    @if $axis=='both'
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    @if $axis=='x'
+        left: 50%
+        transform: translateX(-50%)
+    @if $axis=='y'
+        top: 50%
+        transform: translateY(-50%)

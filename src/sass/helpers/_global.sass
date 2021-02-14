@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+*
+  // outline: 1px solid red
+
+html
+  box-sizing: border-box
+  font-size: 16px
+
+body
+  color: $text
+  width: 100%
+  background-color: $white
+  +font(Gilroy)
+
+  // @include font("Roboto")
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+
+.future
+  all: initial
+  all: inherit
+  all: unset
+
+.size-1
+  font-size: rem(18)
+  line-height: rem(24)
+
+.size-2
+  font-size: rem(20)
+  line-height: rem(24)
+
+.size-3
+  font-size: rem(24)
+  line-height: rem(28)
+
+  // .size-4
+  //   font-size: 18(rem)
+  //   line-height: 26(rem)
+
+.container
+  max-width: 1240px
+  margin-left: auto
+  margin-right: auto
+
+  +mw(1270)
+    margin-left: 20px
+    margin-right: 20px
+
+.hover-opacity:hover
+  opacity: 0.5
+
+.page-body .hide
+  display: none

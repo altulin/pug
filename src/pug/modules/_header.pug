@@ -1,0 +1,14 @@
+//- header menu
+- var menu = ['О компании', 'Продукция', 'Контакты']
+
+header.header
+  .container
+    .header__top
+      a(href="#").header__logo
+        img.header__logo-img(src="" alt="Логотип" width="" height="")
+      nav.header__nav.header-nav
+        ul.header-nav__list
+          each val, i in menu
+            li.header-nav__item
+              a.(`````````````````````)(href="")= val
+    .header__bottom
