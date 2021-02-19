@@ -1,23 +1,54 @@
-const { src, dest, parallel, watch, series } = require('gulp');
-const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const cleancss = require('gulp-clean-css');
-const imagemin = require('gulp-imagemin');
-const newer = require('gulp-newer');
-const del = require('del');
-const sourcemaps = require('gulp-sourcemaps');
-const pug = require('gulp-pug');
+const projectFolder = `dist`;
+const sourceFolder = `src`;
+
+const path = {
+  build: {
+    html: `${projectFolder}/`,
+    css: `${projectFolder}/css`,
+    js: `${projectFolder}/js`,
+    img: `${projectFolder}/img/dest`,
+    fonts: `${projectFolder}/fonts`
+  },
+  src: {
+    html: `${sourceFolder}/**/*.html`, //
+    css: `${sourceFolder}/css/app.min.css`, //
+    js: `${sourceFolder}/js/app.min.js`, //
+    img: `${sourceFolder}/img/dest/**/*`, //
+    fonts: `${sourceFolder}/fonts/**/*`, //
+    pug: `${sourceFolder}/pug/pages/*.pug`,//
+    sass: `${sourceFolder}/sass/style.sass`
+  },
+  watch: {
+    // html: `${sourceFolder}/**/*.html`,
+    css: `${sourceFolder}/sass/**/*.sass`,
+    js: `${sourceFolder}/js/**/*.js`,
+    img: `${sourceFolder}/img/src/**/*.{jpg, png, webp, svg}`,
+    pug: `${sourceFolder}/pug/**/*.pug`
+  },
+  clean: `./${projectFolder}/`
+}
+
+const { src, dest, parallel, watch, series } = require('gulp'),
+  browserSync = require('browser-sync').create(),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify-es').default,
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  cleancss = require('gulp-clean-css'),
+  imagemin = require('gulp-imagemin'),
+  newer = require('gulp-newer'),
+  del = require('del'),
+  sourcemaps = require('gulp-sourcemaps'),
+  pug = require('gulp-pug')
 
 
 function browsersync() {
   browserSync.init({ // Инициализация Browsersync
-    server: { baseDir: 'src/' }, // Указываем папку сервера
+    server: { baseDir: `${sourceFolder}/` }, // Указываем папку сервера
     notify: false, // Отключаем уведомления
     online: true, // Режим работы: true или false
-    open: false
+    open: false,
+    port: 3000
   })
 }
 
@@ -70,18 +101,18 @@ function cleanimg() {
 }
 
 function cleandist() {
-  return del('dist/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
+  return del(`${projectFolder}/**/*`, { force: true }) // Удаляем всё содержимое папки "dist/"
 }
 
 function buildcopy() {
   return src([ // Выбираем нужные файлы
-    'src/css/**/*.min.css',
-    'src/fonts/**/*',
-    'src/js/**/*.min.js',
-    'src/img/dest/**/*',
-    'src/**/*.html',
-  ], { base: 'src' }) // Параметр "base" сохраняет структуру проекта при копировании
-    .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
+    path.src.css,
+    path.src.fonts,
+    path.src.js,
+    path.src.img,
+    path.src.html
+  ], {base: `${sourceFolder}`}) // Параметр "base" сохраняет структуру проекта при копировании
+    .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой
 }
 
 
@@ -96,9 +127,9 @@ function startwatch() {
 }
 
 function transformPug() {
-  return src('src/pug/pages/*.pug')
+  return src(path.src.pug)
     .pipe(pug({pretty: true})) // Преобразуем в html без минификации
-    .pipe(dest('src'))
+    .pipe(dest(`${sourceFolder}`))
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 

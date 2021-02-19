@@ -1,5 +1,5 @@
 //- header menu
-- var menu = ['О компании', 'Продукция', 'Контакты']
+- var menu = [[`О компании`, `#promo`], [`Продукция`, `#catalog`], [`Контакты`, `#contacts`]]
 
 header.header
   .container
@@ -10,5 +10,7 @@ header.header
         ul.header-nav__list
           each val, i in menu
             li.header-nav__item
-              a.(`````````````````````)(href="")= val
+              a.header-nav__link(href=`${val[1]}`)= val[0]
+      button.header__close(type='button' area-label="открыть меню") 
     .header__bottom
+

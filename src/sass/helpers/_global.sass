@@ -10,6 +10,9 @@ html
   box-sizing: border-box
   font-size: 16px
 
+  +mw(768)
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680))
+
 body
   color: $text
   width: 100%
@@ -25,10 +28,13 @@ img
   max-width: 100%
   height: auto
 
-.future
-  all: initial
-  all: inherit
-  all: unset
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset
+  margin: 0
 
 .size-1
   font-size: rem(18)
@@ -47,16 +53,15 @@ img
   //   line-height: 26(rem)
 
 .container
-  max-width: 1240px
+  max-width: 1170px
   margin-left: auto
   margin-right: auto
 
-  +mw(1270)
+  +mw(1210)
     margin-left: 20px
     margin-right: 20px
 
 .hover-opacity:hover
   opacity: 0.5
 
-.page-body .hide
-  display: none
+
