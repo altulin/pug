@@ -12,11 +12,13 @@ const path = {
   src: {
     html: `${sourceFolder}/**/*.html`, //
     css: `${sourceFolder}/css/app.min.css`, //
-    js: `${sourceFolder}/js/app.min.js`, //
+    min_js: `${sourceFolder}/js/script.min.js`, //
+    js: `${sourceFolder}/js/script.js`, //
     img: `${sourceFolder}/img/dest/**/*`, //
     fonts: `${sourceFolder}/fonts/**/*`, //
     pug: `${sourceFolder}/pug/pages/*.pug`,//
-    sass: `${sourceFolder}/sass/style.sass`
+    sass: `${sourceFolder}/sass/style.sass`,
+    libs_js: `${sourceFolder}/js/libs/**/*.js`//
   },
   watch: {
     // html: `${sourceFolder}/**/*.html`,
@@ -56,14 +58,17 @@ function scripts() {
   return src([ // Берём файлы из источников
     'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
     // 'node_modules/mmenu-light/dist/mmenu-light.js', // Пример подключения библиотеки
-    'src/js/libs/*',
-    'src/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+    // 'src/js/libs/*',
+    path.src.libs_js,
+    `${sourceFolder}/js/app.js`, // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
     .pipe(sourcemaps.init())
-    .pipe(concat('app.min.js')) // Конкатенируем в один файл
+    .pipe(concat('script.js')) // Конкатенируем в один файл
+    .pipe(dest(`${sourceFolder}/js`))
+    .pipe(concat('script.min.js'))
     .pipe(uglify()) // Сжимаем JavaScript
     // .pipe(sourcemaps.write()) //добавляем карту
-    .pipe(dest('src/js')) // Выгружаем готовый файл в папку назначения
+    .pipe(dest(`${sourceFolder}/js`)) // Выгружаем готовый файл в папку назначения
     .pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
 
@@ -108,10 +113,11 @@ function buildcopy() {
   return src([ // Выбираем нужные файлы
     path.src.css,
     path.src.fonts,
+    path.src.min_js,
     path.src.js,
     path.src.img,
     path.src.html
-  ], {base: `${sourceFolder}`}) // Параметр "base" сохраняет структуру проекта при копировании
+  ], { base: `${sourceFolder}` }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой
 }
 
@@ -128,7 +134,7 @@ function startwatch() {
 
 function transformPug() {
   return src(path.src.pug)
-    .pipe(pug({pretty: true})) // Преобразуем в html без минификации
+    .pipe(pug({ pretty: true })) // Преобразуем в html без минификации
     .pipe(dest(`${sourceFolder}`))
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
