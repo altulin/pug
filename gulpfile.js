@@ -1,7 +1,7 @@
-const projectFolder = `name_project`; //Папка продакшн
+const projectFolder = `dist`; //Папка продакшн
 const sourceFolder = `_src`;  // Папка разработки
 
-// js 
+// js
 const sourceJs = `${sourceFolder}/js/app.js`; // файл для разработки Пользовательские скрипты
 const projectJs = `script.js`; // файл в продакшн
 const projectJsMin = `script.min.js`; // файл в продакшн минифицированный
@@ -101,29 +101,28 @@ function styles() {
   ])
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(concat(projectCssMin)) // Конкатенируем в файл 
+    .pipe(concat(projectCssMin)) // Конкатенируем в файл
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
     .pipe(cleancss({ level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ })) // Минифицируем стили
     .pipe(sourcemaps.write(".")) //добавляем карту
-    .pipe(dest(`${sourceFolder}/css/`)) // Выгрузим результат в папку 
+    .pipe(dest(`${sourceFolder}/css/`)) // Выгрузим результат в папку
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
 function images() {
-  return src(sourceImg) // Берём все изображения из папки источника
+  return src(`${sourceFolder}/_img/*`) // Берём все изображения из папки источника
     .pipe(newer(projectImg)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
+
     ])) // Сжимаем и оптимизируем изображеня
     .pipe(dest(`${sourceFolder}/img`)) // Выгружаем оптимизированные изображения в папку назначения
+}
 
+function imagesSvg() {
+  return src(`${sourceFolder}/_img/svg/*`) // Берём все изображения из папки источника
+    .pipe(newer(`${sourceFolder}/img/svg`)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -131,7 +130,7 @@ function images() {
           { cleanupIDs: false }
         ]
       })
-    ])) // оптимизируем svg
+    ]))
     .pipe(dest(`${sourceFolder}/img/svg`)) // Выгружаем оптимизированные изображения в папку назначения
 }
 
@@ -162,13 +161,14 @@ function startwatch() {
     `${sourceFolder}/js/*.js`,
     `!${sourceFolder}/js/${projectJs}`,
     `!${sourceFolder}/js/${projectJsMin}`
-  ], scripts);// Выбираем все файлы JS в проекте, а затем исключим 
+  ], scripts);// Выбираем все файлы JS в проекте, а затем исключим
 
   watch([`${sourceFolder}/sass/**/*.sass`, `!${sourceCss}`], styles);
 
   watch([`${sourceFolder}/pug/**/*.pug`], transformPug);
 
-  watch(`${sourceFolder}/_img**/*`, images);
+  watch(`${sourceFolder}/_img/*`, images);
+  watch(`${sourceFolder}/_img/svg`, imagesSvg);
 }
 
 function transformPug() {
@@ -182,9 +182,10 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
+exports.imagesSvg = imagesSvg;
 exports.cleanImg = cleanImg;
 exports.transformPug = transformPug;
 
 
-exports.default = parallel(cleanImg, styles, scripts, images, browsersync, startwatch);
+exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, browsersync, startwatch);
 exports.build = series(cleanImg, styles, scripts, images, buildcopy);
