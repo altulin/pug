@@ -62,7 +62,16 @@ const { src, dest, parallel, watch, series } = require('gulp'),
   newer = require('gulp-newer'),
   del = require('del'),
   sourcemaps = require('gulp-sourcemaps'),
-  pug = require('gulp-pug')
+  pug = require('gulp-pug'),
+  // sprite = require('gulp-svg-sprite'),
+  svgmin = require('gulp-svgmin'),
+  cheerio = require('gulp-cheerio'),
+  replace = require('gulp-replace'),
+  svgstore = require('gulp-svgstore'),
+  rename = require("gulp-rename"),
+  webp = require('gulp-webp'),
+  webpHTML = require('gulp-webp-html')
+
 
 
 function browsersync() {
@@ -110,7 +119,7 @@ function styles() {
 }
 
 function images() {
-  return src(`${sourceFolder}/_img/*`) // Берём все изображения из папки источника
+  return src(`${sourceFolder}/_img/*.{png,jpg}`) // Берём все изображения из папки источника
     .pipe(newer(projectImg)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -118,11 +127,13 @@ function images() {
 
     ])) // Сжимаем и оптимизируем изображеня
     .pipe(dest(`${sourceFolder}/img`)) // Выгружаем оптимизированные изображения в папку назначения
-}
+};
 
 function imagesSvg() {
-  return src(`${sourceFolder}/_img/svg/*`) // Берём все изображения из папки источника
-    .pipe(newer(`${sourceFolder}/img/svg`)) // Проверяем, было ли изменено (сжато) изображение ранее
+  del(`${sourceFolder}/img/svg/*.svg`, { force: true });
+  return src(`${sourceFolder}/_img/svg/*.svg`) // Берём все изображения из папки источника
+
+    // .pipe(newer(`${sourceFolder}/img/svg`)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -132,15 +143,65 @@ function imagesSvg() {
       })
     ]))
     .pipe(dest(`${sourceFolder}/img/svg`)) // Выгружаем оптимизированные изображения в папку назначения
-}
+};
 
-// function cleanimg() {
-//   return del('src/images/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
-// }
+function clean() {
+  return del(projectFolder, { force: true }); // Удаляем всю папку продакшн
+};
 
 function cleanImg() {
-  return del(`projectImg`, { force: true }) // Удаляем всё содержимое папки "dist/"
-}
+  return del(projectImg, { force: true }); // Удаляем всё содержимое папки "img/"
+};
+
+function createSprite() {
+  del(`${sourceFolder}/img/sprite.svg`, { force: true });
+  return src(`${sourceFolder}/_img/sprite/*.svg`)
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+
+    // minify svg
+    .pipe(svgmin({
+      js2svg: {
+        // pretty: true
+      }
+    }))
+
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+
+    .pipe(replace('&gt;', '>'))
+
+    // .pipe(sprite({
+    //   mode: {
+    //     symbol: {
+    //       sprite: "../sprite.svg",
+    //       render: {
+    //         scss: {
+    //           dest: '../../../sass/_sprite.scss',
+    //           // template: assetsDir + "sass/templates/_sprite_template.scss"
+    //         }
+    //       }
+    //     }
+    //   }
+    // }))
+
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+
+    .pipe(rename("sprite.svg"))
+
+
+    .pipe(dest(`${sourceFolder}/img`))
+};
+
 
 function buildcopy() {
   return src([ // Выбираем нужные файлы
@@ -152,11 +213,22 @@ function buildcopy() {
     path.src.html
   ], { base: `${sourceFolder}` }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой
+};
+
+function createWebp() {
+  return src(`${sourceFolder}/_img/*.{png,jpg}`)
+    .pipe(newer(`${sourceFolder}/img/webp`))
+    .pipe(webp())
+    .pipe(dest(`${sourceFolder}/img/webp`))
 }
 
+function webpHtml() {
+  return src(`${sourceFolder}/**/*.html`)
+    .pipe(webpHTML())
+    .pipe(dest(`${sourceFolder}`))
+}
 
 function startwatch() {
-
   watch([
     `${sourceFolder}/js/*.js`,
     `!${sourceFolder}/js/${projectJs}`,
@@ -164,11 +236,12 @@ function startwatch() {
   ], scripts);// Выбираем все файлы JS в проекте, а затем исключим
 
   watch([`${sourceFolder}/sass/**/*.sass`, `!${sourceCss}`], styles);
-
   watch([`${sourceFolder}/pug/**/*.pug`], transformPug);
-
   watch(`${sourceFolder}/_img/*`, images);
+  watch(`${sourceFolder}/_img/*`, createWebp);
   watch(`${sourceFolder}/_img/svg`, imagesSvg);
+  watch(`${sourceFolder}/_img/sprite`, createSprite);
+  // watch(`${sourceFolder}/*.html`, webpHtml);
 }
 
 function transformPug() {
@@ -178,14 +251,25 @@ function transformPug() {
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+
+
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
-exports.imagesSvg = imagesSvg;
+// exports.imagesSvg = imagesSvg;
+// exports.sprite = sprite;
 exports.cleanImg = cleanImg;
 exports.transformPug = transformPug;
+exports.createSprite = createSprite;
+exports.svgmin = svgmin;
+exports.cheerio = cheerio;
+exports.replace = replace;
+exports.svgstore = svgstore;
+exports.rename = rename;
+exports.createWebp = createWebp;
+exports.webpHtml = webpHtml;
 
 
-exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, browsersync, startwatch);
-exports.build = series(cleanImg, styles, scripts, images, buildcopy);
+exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, browsersync, startwatch);
+exports.build = series(clean, styles, scripts, images, buildcopy);
