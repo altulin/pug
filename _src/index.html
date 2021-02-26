@@ -2,12 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Какой-то сайт</title>
+    <title>isk online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="">
+    <meta name="description" content="isk online">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta property="og:type" content="article">
     <meta property="og:title" content="">
@@ -19,35 +19,190 @@
 </html>
 <body class="page-body">
   <header class="header">
-    <div class="container">
-      <div class="header__top"><a class="header__logo" href="#"><img class="header__logo-img" src="" alt="Логотип" width="" height=""></a>
-        <nav class="header__nav header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item"><a class="header-nav__link" href="#promo">О компании</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#catalog">Продукция</a></li>
-            <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <button class="header__close" type="button" area-label="открыть меню"></button>
-        <svg class="btn">
-          <use xlink:href="../img/sprite.svg#Vector_55"></use>
-        </svg>
-        <svg class="btn">
-          <use xlink:href="../img/sprite.svg#a"></use>
-        </svg>
+    <div class="header__inner container"><a class="header__logo logo" href="#">
+        <figure class="logo__img-wrap">
+          <picture>
+            <source srcset="/img/webp/logo.webp" type="image/webp"/><img class="logo__img" src="/img/logo.png" alt="logo" width="51" loading="lazy"/>
+          </picture>
+        </figure><span class="logo__text">isk online</span></a>
+      <div class="header__content"> 
+        <p class="header__content-text">сервис от семейного юриста</p><a class="header__content-link" href="https://gordilezha.ru/" target="_blank" rel="noopener">Алексея Гордилежи</a>
       </div>
-      <div class="header__bottom"></div>
+      <div class="header__social social"> <a class="social__link social__link--tg" href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener">мы в телеграмм
+          <svg class="social__tg">
+            <use xlink:href="../img/sprite.svg#tg"></use>
+          </svg></a><a class="social__link social__link--viber" href="viber://forward?text=79526199199" target="_blank" rel="noopener">мы в вайбер
+          <svg class="social__viber">
+            <use xlink:href="../img/sprite.svg#viber"></use>
+          </svg></a><a class="social__link social__link--whatsapp" href="https://wa.me/79526199199" target="_blank" rel="noopener">мы в вотсап
+          <svg class="social__wa">
+            <use xlink:href="../img/sprite.svg#wa"></use>
+          </svg></a></div>
+      <div class="header__get"> 
+        <p class="header__get-text">Получить<br>консультацию </p>
+      </div>
+      <button class="header__open hidden" type="button" area-label="открыть меню"></button>
     </div>
   </header>
-  <main>
-    <h1>hi</h1>
-    <section class="promo">
-      <h2 class="promo__title"></h2>
-      <p>hi</p><img class="movie-poster" src="img/car.png" alt="sdfsdf">
+  <main class="page-main">
+    <section class="promo"> 
+      <div class="promo__inner container"> 
+        <div class="promo__left">
+          <h1 class="promo__title title title--bold size-4">Поможем подготовить<br>и подать заявление в суд<br>без личной встречи с юристом</h1>
+          <p class="promo__text size-2">Опытные юристы по семейным спорам в кратчайшие<br>сроки подготовят вам заявление, которое будет<br>твечать всем требованиям действующего<br>законодательства, а вы получите его не выходя из дома</p><a class="promo__link" href="#marriage"> 
+            <picture>
+              <source srcset="/img/webp/marriage.webp" type="image/webp"/><img class="promo__link-img" src="/img/marriage.png" alt="расторжение брака" width="57" loading="lazy"/>
+            </picture><span class="promo__link-text size-5">Заявление в суд<br>о расторжении брака</span></a><a class="promo__link" href="#alimony"> 
+            <picture>
+              <source srcset="/img/webp/alimony.webp" type="image/webp"/><img class="promo__link-img" src="/img/alimony.png" alt="аллименты" width="57" loading="lazy"/>
+            </picture><span class="promo__link-text size-5">Заявление в суд о взыскании<br>аллиментов на ребенка</span></a>
+        </div>
+      </div>
+      <figure class="promo__img-wrap"> 
+        <picture>
+          <source srcset="/img/webp/promo-bg.webp" type="image/webp"/><img class="promo__img" src="/img/promo-bg.png" alt="" width="846" loading="lazy"/>
+        </picture>
+      </figure>
+    </section>
+    <section class="statement">
+      <div class="statement__inner container"> 
+        <h2 class="statement__title title size-4">Заявления в суд</h2>
+        <ul class="statement__list"> 
+          <li class="statement__item card" id="alimony">
+            <div class="card__head"> 
+              <figure class="card__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="155" loading="lazy"/>
+                </picture>
+              </figure>
+              <h3 class="card__title size-3">Заявление в суд<br>о выскании алиментов<br>на ребенка</h3>
+            </div>
+            <p class="card__text size-1">Взыскать алименты на ребенка в судебном порядке можно, если второй родитель добровольно их не платит или платит нерегулярно. Самый простой и быстрый способ это сделать – подать заявление и получить решение суда уже через 5 дней</p><a class="card__link" href="#">Получить заявление</a>
+          </li>
+          <li class="statement__item card" id="marriage">
+            <div class="card__head"> 
+              <figure class="card__img-wrap"> 
+                <picture>
+                  <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="155" loading="lazy"/>
+                </picture>
+              </figure>
+              <h3 class="card__title size-3">Заявление в суд<br>о расторжении брака</h3>
+            </div>
+            <p class="card__text size-1">Расторжение брака в судебном порядке необходимо при наличии хотя бы одной из двух причин – наличие общего несовершеннолетнего ребенка или же отсутствие согласия на развод одного из супругов. Для этого достаточно подать исковое заявление</p><a class="card__link" href="#">Получить заявление</a>
+          </li>
+        </ul>
+        <div class="statement__experience experience">
+          <figure class="experience__img-wrap"> 
+            <picture>
+              <source srcset="/img/webp/man.webp" type="image/webp"/><img class="experience__img" src="/img/man.png" alt="" width="366" loading="lazy"/>
+            </picture>
+          </figure>
+          <div class="experience__col"> 
+            <h3 class="experience__title">Все заявления прорабатываются<br>юристом с 10 летним опытом<br>в семейных спорах</h3>
+            <ul class="experience__list"> 
+              <li class="experience__item">
+                <p class="experience__text"><b>Гарантия</b> качества подготовленных заявлений</p>
+              </li>
+              <li class="experience__item">
+                <p class="experience__text"><b>Заявления актуальны</b> законодательству на 2021 год</p>
+              </li>
+              <li class="experience__item">
+                <p class="experience__text"><b>Быстрый срок подготовки</b> – в течении суток получите готовое заявление</p>
+              </li>
+              <li class="experience__item">
+                <p class="experience__text"><b>Защита</b> – конфиденциальности персональных данных</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="help"> 
+      <div class="help__inner container"> 
+        <h2 class="help__title title size-4">Как именно мы помогаем<br>подготовить и подать<br>заявление в суд</h2>
+        <ul class="help__list"> 
+          <li class="help__item"> 
+            <div class="help__num size-4"> <span>1</span></div>
+            <h3 class="help__item-title size-3">Заполните данные в установленной форме</h3>
+            <p class="help__text size-1">Внимательно заполните данные в необходимом вам заявлении</p>
+          </li>
+          <li class="help__item"> 
+            <div class="help__num size-4"> <span>2</span></div>
+            <h3 class="help__item-title size-3">Оплатите подготовку заявления </h3>
+            <p class="help__text size-1">По защищеному соединению с системой оплаты</p>
+          </li>
+          <li class="help__item"> 
+            <div class="help__num size-4"> <span>3</span></div>
+            <h3 class="help__item-title size-3">Получите файл с готовым заявлением в Doc или Pdf</h3>
+            <p class="help__text size-1">Наши юристы подготовят заявление и отправят его вам на e-mail</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="faq"> 
+      <div class="faq__inner container"> 
+        <div class="faq__col faq__col--left">
+          <h2 class="faq__title title size-4">Частые вопросы,<br>которые задают<br>нам клиенты</h2>
+          <p class="faq__text size-1">Задайте нам вопрос онлайн,<br>в любом удобном для вас мессенжере </p>
+          <div class="faq__iphone"> 
+            <figure class="faq__img-wrap"> 
+              <picture>
+                <source srcset="/img/webp/Iphone.webp" type="image/webp"/><img class="faq__img" src="/img/Iphone.png" alt="" width="338" loading="lazy"/>
+              </picture>
+            </figure>
+            <div class="faq__social social"> <a class="social__link social__link--tg" href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener">мы в телеграмм
+                <svg class="social__tg">
+                  <use xlink:href="../img/sprite.svg#tg"></use>
+                </svg></a><a class="social__link social__link--viber" href="viber://forward?text=79526199199" target="_blank" rel="noopener">мы в вайбер
+                <svg class="social__viber">
+                  <use xlink:href="../img/sprite.svg#viber"></use>
+                </svg></a><a class="social__link social__link--whatsapp" href="https://wa.me/79526199199" target="_blank" rel="noopener">мы в вотсап
+                <svg class="social__wa">
+                  <use xlink:href="../img/sprite.svg#wa"></use>
+                </svg></a></div>
+          </div>
+        </div>
+        <div class="faq__col faq__col--right">
+          <div class="faq__tabs tabs" id="tabs">
+            <ul class="tabs__list">  
+              <li class="tabs__item"><a class="tabs__link" href="#tab-1">Как подать заявление?</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="#tab-2">Как подать заявление?</a></li>
+            </ul>
+            <div id="tab-1">
+              <p class="tabs__content">А ни как!!!!</p>
+            </div>
+            <div id="tab-2">
+              <p class="tabs__content">А ни как!</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <div></div>
+  <footer class="page-footer"> 
+    <div class="page-footer__inner container"> 
+      <div class="page-footer__col page-footer__col--left"> 
+        <p class="page-footer__copy">2021 © Isk online</p>
+        <ul class="page-footer__pay pay">
+          <li class="pay__item pay__item--visa">
+            <picture>
+              <source srcset="/img/webp/visa.webp" type="image/webp"/><img class="pay__img" src="/img/visa.png" alt="платеж" width="55" loading="lazy"/>
+            </picture>
+          </li>
+          <li class="pay__item pay__item--mir">
+            <picture>
+              <source srcset="/img/webp/mir.webp" type="image/webp"/><img class="pay__img" src="/img/mir.png" alt="платеж" width="63" loading="lazy"/>
+            </picture>
+          </li>
+          <li class="pay__item pay__item--mc">
+            <picture>
+              <source srcset="/img/webp/mc.webp" type="image/webp"/><img class="pay__img" src="/img/mc.png" alt="платеж" width="30" loading="lazy"/>
+            </picture>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__col page-footer__col--right"> <a class="page-footer__link hover-opacity" href="#">Оплата и возврат</a><a class="page-footer__link hover-opacity" href="#">Договор оферта</a><a class="page-footer__link hover-opacity" href="#">Политика конфиденциальности</a></div>
+    </div>
   </footer>
   <script src="js/script.js"></script>
 </body>

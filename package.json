@@ -28,7 +28,6 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
-    "gulp-webp-html": "^1.0.2",
     "jquery": "^3.5.1",
     "node-normalize-scss": "^8.1.2"
   },

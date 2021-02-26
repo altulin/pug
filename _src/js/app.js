@@ -1,1 +1,5 @@
-console.log(`1525`)
+// faq tabs
+
+$('#tabs').responsiveTabs({
+  // startCollapsed: 'accordion'
+});

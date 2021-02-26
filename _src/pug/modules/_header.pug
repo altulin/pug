@@ -1,22 +1,28 @@
-//- header menu
-- var menu = [[`О компании`, `#promo`], [`Продукция`, `#catalog`], [`Контакты`, `#contacts`]]
-
-
 header.header
-  .container
-    .header__top
-      a(href="#").header__logo
-        img.header__logo-img(src="" alt="Логотип" width="" height="")
-      nav.header__nav.header-nav
-        ul.header-nav__list
-          each val, i in menu
-            li.header-nav__item
-              a.header-nav__link(href=`${val[1]}`)= val[0]
-      button.header__close(type='button' area-label="открыть меню")
+  .header__inner.container
+    a(href="#").header__logo.logo
+      figure.logo__img-wrap
+        +img(`logo`, `png`, `logo`, `logo__img`, `51`)
+      span.logo__text isk online
 
-      +svg(`Vector_55`, `btn`)
-      +svg(`a`, `btn`)
-      //- +svg(`dfgdfgd`, `btn`)
+    .header__content 
+      p.header__content-text сервис от семейного юриста
+      a.header__content-link(href="https://gordilezha.ru/" target="_blank" rel="noopener") Алексея Гордилежи
+
+    .header__social.social 
+      a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
+        +svg(`tg`, `social__tg`)
+      a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
+        +svg(`viber`, `social__viber`)
+      a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
+        +svg(`wa`, `social__wa`)
+    
+    .header__get 
+      p.header__get-text Получить<br>консультацию 
+    
+    
+    button.header__open.hidden(type='button' area-label="открыть меню")
+
+    
 
 
-    .header__bottom

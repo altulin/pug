@@ -1,5 +1,102 @@
 .header
-  background-color: green
+  margin-bottom: -152px
+  z-index: 5
+  position: relative
 
-  .btn
-    fill: tomato
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 55px
+    padding-bottom: 55px
+
+  &__logo
+    font-size: rem(16)
+    line-height: rem(19)
+    padding-right: 10px
+    display: flex
+    align-items: center
+    border: 1px solid #DECEBF
+    border-radius: 4px
+
+  &__content
+    margin-right: auto
+    margin-left: 20px
+    font-size: rem(12)
+    line-height: rem(12)
+
+  &__content-text
+    margin-bottom: 3px
+
+  &__content-link
+    color: #BC9F8B
+    text-decoration: underline
+
+  &__get
+    margin-left: 20px
+
+  &__get-text
+    font-weight: 500
+    font-size: rem(14)
+    line-height: rem(16)
+
+.container
+  max-width: 1170px
+  margin-left: auto
+  margin-right: auto
+
+.logo
+
+  &__img
+    display: block
+    width: 51px
+    height: 40px
+
+  &__text
+    margin-left: 2px
+    color: $text
+    font-weight: 500
+
+.social
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__link
+    font-size: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 32px
+    height: 32px
+    border-radius: 50%
+
+    & svg
+      fill: $white
+
+    & + a
+      margin-left: 10px
+
+  &__link--tg
+    background-image: linear-gradient(203.2deg, #37AEE2 21.67%, #1E96C8 70%)
+
+    & svg
+      width: 19px
+      height: 16px
+
+  &__link--viber
+    background-color: #7F4DA0
+
+    & svg
+      width: 16px
+      height: 18px
+
+  &__link--whatsapp
+    background-color: #25D366
+
+    & svg
+      width: 20px
+      height: 22px
+
+.hidden
+  display: none

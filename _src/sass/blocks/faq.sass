@@ -1,0 +1,120 @@
+.faq
+
+  &__inner
+    background-color: #F7F4F2
+    border-radius: 20px
+    display: flex
+    padding-top: 100px
+    padding-left: 60px
+    padding-right: 75px
+    padding-bottom: 157px
+
+  &__title
+    margin-bottom: 30px
+
+  &__text
+    margin-bottom: 64px
+
+  &__iphone
+    position: relative
+    left: -15px
+
+  &__img
+    display: block
+
+  &__img-wrap
+    overflow: hidden
+
+  &__social
+    padding-top: 18px
+    padding-bottom: 20px
+    padding-left: 28px
+    padding-right: 28px
+    background-color: #fff
+    justify-content: flex-start
+    position: absolute
+    top: -20px
+    left: 50%
+    transform: translateX(-50%)
+    border-radius: 10px
+
+    &::after
+      position: absolute
+      content: ""
+      top: 100%
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 11px 11px 0 11px
+      border-color: #fff transparent transparent transparent
+
+    & .social__link
+      width: 40px
+      height: 40px
+
+      & + a
+        margin-left: 30px
+
+  &__col--right
+    margin-left: 55px
+    flex-grow: 1
+
+  &__tabs
+
+    .r-tabs-anchor
+      font-weight: 600
+      font-size: rem(18)
+      line-height: rem(21)
+      color: $text
+      padding-left: 30px
+      padding-top: 28px
+      padding-bottom: 27px
+      display: block
+      border: 1px solid #E6E6EA
+      border-radius: 5px
+      position: relative
+      background-color: #fff
+
+      &:not([href="#tab-1"])
+        margin-top: 20px
+
+      &::after
+        position: absolute
+        content: ""
+        width: 40px
+        height: 40px
+        background-image: url(/img/arrow.png)
+        right: 30px
+        top: 19px
+
+    & .tabs__content
+      font-size: rem(18)
+      line-height: rem(24)
+      color: $text
+
+    & .r-tabs-panel
+      padding-top: 30px
+      padding-bottom: 30px
+      padding-left: 30px
+      padding-right: 30px
+      border: 1px solid #E6E6EA
+      border-top: none
+      border-radius: 0 0 5px 5px
+      background-color: #fff
+
+    & .r-tabs-state-active
+
+      & .r-tabs-anchor
+        color: #C4997A
+        border-radius: 5px 5px 0 0
+
+        &::after
+          transform: rotate(90deg)
+
+.r-tabs .r-tabs-nav
+  display: none
+
+.r-tabs .r-tabs-accordion-title
+  display: block

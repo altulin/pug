@@ -69,8 +69,7 @@ const { src, dest, parallel, watch, series } = require('gulp'),
   replace = require('gulp-replace'),
   svgstore = require('gulp-svgstore'),
   rename = require("gulp-rename"),
-  webp = require('gulp-webp'),
-  webpHTML = require('gulp-webp-html')
+  webp = require('gulp-webp')
 
 
 
@@ -178,19 +177,7 @@ function createSprite() {
 
     .pipe(replace('&gt;', '>'))
 
-    // .pipe(sprite({
-    //   mode: {
-    //     symbol: {
-    //       sprite: "../sprite.svg",
-    //       render: {
-    //         scss: {
-    //           dest: '../../../sass/_sprite.scss',
-    //           // template: assetsDir + "sass/templates/_sprite_template.scss"
-    //         }
-    //       }
-    //     }
-    //   }
-    // }))
+
 
     .pipe(svgstore({
       inlineSvg: true
@@ -222,11 +209,6 @@ function createWebp() {
     .pipe(dest(`${sourceFolder}/img/webp`))
 }
 
-function webpHtml() {
-  return src(`${sourceFolder}/**/*.html`)
-    .pipe(webpHTML())
-    .pipe(dest(`${sourceFolder}`))
-}
 
 function startwatch() {
   watch([
@@ -241,7 +223,6 @@ function startwatch() {
   watch(`${sourceFolder}/_img/*`, createWebp);
   watch(`${sourceFolder}/_img/svg`, imagesSvg);
   watch(`${sourceFolder}/_img/sprite`, createSprite);
-  // watch(`${sourceFolder}/*.html`, webpHtml);
 }
 
 function transformPug() {
@@ -268,7 +249,6 @@ exports.replace = replace;
 exports.svgstore = svgstore;
 exports.rename = rename;
 exports.createWebp = createWebp;
-exports.webpHtml = webpHtml;
 
 
 exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, browsersync, startwatch);
