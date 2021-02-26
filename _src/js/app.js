@@ -1,5 +1,10 @@
-// faq tabs
+$(function () {
 
-$('#tabs').responsiveTabs({
-  // startCollapsed: 'accordion'
+  // faq tabs
+  $('#tabs').responsiveTabs({
+    startCollapsed: 'accordion'
+  });
+
+
 });
+
