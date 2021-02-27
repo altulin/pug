@@ -3,49 +3,49 @@ include ../helpers/mixins.pug
 
 block content
 
-  section.promo 
-    .promo__inner.container 
+  section.promo
+    .promo__inner.container
       .promo__left
-        h1.promo__title.title.title--bold.size-4 Поможем подготовить<br>и подать заявление в суд<br>без личной встречи с юристом
+        h1.promo__title.title.title--bold.size-4 Поможем подготовить<br>и&nbsp;подать заявление в&nbsp;суд<br>без личной встречи с&nbsp;юристом
         p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие<br>сроки подготовят вам заявление, которое будет<br>твечать всем требованиям действующего<br>законодательства, а вы получите его не выходя из дома
 
-        a.promo__link(href="#marriage") 
+        a.promo__link(href="#marriage")
           +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
-          span.promo__link-text.size-5 Заявление в суд<br>о расторжении брака
-        
-        a.promo__link(href="#alimony") 
+          span.promo__link-text.size-5 Заявление в суд<br> о расторжении брака
+
+        a.promo__link(href="#alimony")
           +img(`alimony`, `png`, `аллименты`, `promo__link-img`, `57`)
-          span.promo__link-text.size-5 Заявление в суд о взыскании<br>аллиментов на ребенка
-    figure.promo__img-wrap 
+          span.promo__link-text.size-5 Заявление в суд о взыскании<br> аллиментов на ребенка
+    figure.promo__img-wrap
       +img(`promo-bg`, `png`, ``, `promo__img`, `846`)
-  
+
   section.statement
-    .statement__inner.container 
+    .statement__inner.container
       h2.statement__title.title.size-4 Заявления в суд
-      ul.statement__list 
+      ul.statement__list
         li.statement__item.card(id="alimony")
 
-          .card__head 
-            figure.card__img-wrap 
+          .card__head
+            figure.card__img-wrap
               +img(`hands`, `png`, ``, `card__img`, `155`)
-            h3.card__title.size-3 Заявление в суд<br>о выскании алиментов<br>на ребенка
+            h3.card__title.size-3 Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка
           p.card__text.size-1 Взыскать алименты на ребенка в судебном порядке можно, если второй родитель добровольно их не платит или платит нерегулярно. Самый простой и быстрый способ это сделать – подать заявление и получить решение суда уже через 5 дней
           a.card__link(href="alimenty-step-2.html") Получить заявление
-        
+
         li.statement__item.card(id="marriage")
-          .card__head 
-            figure.card__img-wrap 
+          .card__head
+            figure.card__img-wrap
               +img(`hands`, `png`, ``, `card__img`, `155`)
-            h3.card__title.size-3 Заявление в суд<br>о расторжении брака
+            h3.card__title.size-3 Заявление в суд<br> о&nbsp;расторжении брака
           p.card__text.size-1 Расторжение брака в судебном порядке необходимо при наличии хотя бы одной из двух причин – наличие общего несовершеннолетнего ребенка или же отсутствие согласия на развод одного из супругов. Для этого достаточно подать исковое заявление
           a.card__link(href="") Получить заявление
 
       .statement__experience.experience
-        figure.experience__img-wrap 
-          +img(`man`, `png`, ``, `experience__img`, `366`)  
-        .experience__col 
+        figure.experience__img-wrap
+          +img(`man`, `png`, ``, `experience__img`, `366`)
+        .experience__col
           h3.experience__title Все заявления прорабатываются<br>юристом с 10 летним опытом<br>в семейных спорах
-          ul.experience__list 
+          ul.experience__list
             li.experience__item
               p.experience__text <b>Гарантия</b> качества подготовленных заявлений
             li.experience__item
@@ -55,37 +55,37 @@ block content
             li.experience__item
               p.experience__text <b>Защита</b> – конфиденциальности персональных данных
 
-  section.help 
-    .help__inner.container 
+  section.help
+    .help__inner.container
       h2.help__title.title.size-4 Как именно мы помогаем<br>подготовить и подать<br>заявление в суд
-      ul.help__list 
-        li.help__item 
-          .help__num.size-4 
+      ul.help__list
+        li.help__item
+          .help__num.size-4
             span 1
           h3.help__item-title.size-3 Заполните данные в установленной форме
           p.help__text.size-1 Внимательно заполните данные в необходимом вам заявлении
-        
-        li.help__item 
-          .help__num.size-4 
+
+        li.help__item
+          .help__num.size-4
             span 2
-          h3.help__item-title.size-3 Оплатите подготовку заявления 
+          h3.help__item-title.size-3 Оплатите подготовку заявления
           p.help__text.size-1 По защищеному соединению с системой оплаты
-        
-        li.help__item 
-          .help__num.size-4 
+
+        li.help__item
+          .help__num.size-4
             span 3
           h3.help__item-title.size-3 Получите файл с готовым заявлением в Doc или Pdf
           p.help__text.size-1 Наши юристы подготовят заявление и отправят его вам на e-mail
 
-  section.faq 
-    .faq__inner.container 
+  section.faq
+    .faq__inner.container
       .faq__col.faq__col--left
-        h2.faq__title.title.size-4 Частые вопросы,<br>которые задают<br>нам клиенты
-        p.faq__text.size-1 Задайте нам вопрос онлайн,<br>в любом удобном для вас мессенжере 
-        .faq__iphone 
-          figure.faq__img-wrap 
+        h2.faq__title.title.size-4.desktop-visibility Частые вопросы,<br>которые задают<br>нам клиенты
+        p.faq__text.size-1 Задайте нам вопрос онлайн,<br>в любом удобном для вас мессенжере
+        .faq__iphone
+          figure.faq__img-wrap
             +img(`Iphone`, `png`, ``, `faq__img`, `338`)
-          .faq__social.social 
+          .faq__social.social
             a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
               +svg(`tg`, `social__tg`)
             a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
@@ -95,19 +95,17 @@ block content
 
 
       .faq__col.faq__col--right
+        h2.faq__title.title.size-4.tablet-visibility Частые вопросы,<br>которые задают<br>нам клиенты
         .faq__tabs.tabs#tabs
-          ul.tabs__list   
+          ul.tabs__list
             li.tabs__item
               a.tabs__link(href="#tab-1") Как подать заявление?
 
             li.tabs__item
               a.tabs__link(href="#tab-2") Как подать заявление?
-          
+
           #tab-1
             p.tabs__content А ни как!!!!
 
           #tab-2
             p.tabs__content А ни как!
-
-
-

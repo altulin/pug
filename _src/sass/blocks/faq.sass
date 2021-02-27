@@ -9,15 +9,26 @@
     padding-right: 75px
     padding-bottom: 157px
 
+    +mw(768)
+      flex-direction: column-reverse
+      padding-left: 15px
+      padding-right: 15px
+      padding-top: 40px
+      padding-bottom: 40px
+
   &__title
     margin-bottom: 30px
 
   &__text
     margin-bottom: 64px
+    text-align: center
 
   &__iphone
     position: relative
     left: -15px
+
+    +mw(768)
+      left: 0
 
   &__img
     display: block
@@ -57,9 +68,18 @@
       & + a
         margin-left: 30px
 
+  &__col--left
+    display: flex
+    flex-direction: column
+    align-items: center
+
   &__col--right
     margin-left: 55px
     flex-grow: 1
+
+    +mw(768)
+      margin-left: 0
+      margin-bottom: 40px
 
   &__tabs
 

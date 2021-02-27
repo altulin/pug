@@ -5,24 +5,24 @@ header.header
         +img(`logo`, `png`, `logo`, `logo__img`, `51`)
       span.logo__text isk online
 
-    .header__content 
+    .header__content
       p.header__content-text сервис от семейного юриста
       a.header__content-link(href="https://gordilezha.ru/" target="_blank" rel="noopener") Алексея Гордилежи
 
-    .header__social.social 
-      a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
-        +svg(`tg`, `social__tg`)
-      a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
-        +svg(`viber`, `social__viber`)
-      a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
-        +svg(`wa`, `social__wa`)
-    
-    .header__get 
-      p.header__get-text Получить<br>консультацию 
-    
-    
-    button.header__open.hidden(type='button' area-label="открыть меню")
-
-    
 
 
+    nav.header__nav.nav#main-nav
+      ul.nav__list
+        li.nav__item.header__social.social
+          a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
+            +svg(`tg`, `social__tg`)
+          a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
+            +svg(`viber`, `social__viber`)
+          a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
+            +svg(`wa`, `social__wa`)
+
+        li.nav__item.header__get.desktop-visibility
+          p.header__get-text Получить<br>консультацию
+
+
+      button.header__open.hidden(type='button' area-label="открыть меню")

@@ -2,6 +2,9 @@
   padding-top: 100px
   background-color: #FBF9F8
 
+  +mw(768)
+    padding-top: 40px
+
   &__title
     margin-bottom: 40px
 
@@ -9,6 +12,10 @@
     display: flex
     justify-content: space-between
     margin-bottom: 144px
+
+    +mw(768)
+      flex-direction: column
+      margin-bottom: 40px
 
   &__item
     width: calc(50% - 17px)
@@ -21,6 +28,9 @@
     display: flex
     flex-direction: column
 
+    +mw(768)
+      width: 100%
+
 .card
 
   &__head
@@ -30,9 +40,20 @@
     align-items: center
     margin-bottom: 40px
 
+    +mw(768)
+      padding-left: 0
+      padding-right: 20px
+
   &__img-wrap
     overflow: hidden
     margin-right: 22px
+    align-self: flex-end
+
+    +mw(768)
+      width: 80px
+      flex-shrink: 0
+      margin-right: 15px
+      display: none
 
   &__img
     display: block
@@ -41,10 +62,21 @@
     font-family: PTSerif,Arial,sans-serif
     font-weight: 400
 
+    +mw(768)
+      padding-bottom: 20px
+      padding-left: 20px
+
+      & br
+        display: none
+
   &__text
     margin-left: 55px
     margin-right: 55px
     margin-bottom: 40px
+
+    +mw(768)
+      margin-left: 20px
+      margin-right: 20px
 
   &__link
     margin-left: 55px
@@ -62,6 +94,10 @@
     border-radius: 4px
     transition: 0.2s
 
+    +mw(768)
+      margin-left: 20px
+      margin-right: 20px
+
     &:hover
       background-color: #D0AE96
       color: $white
@@ -70,9 +106,15 @@
   display: flex
   justify-content: space-around
 
+  +mw(768)
+    flex-direction: column-reverse
+
   &__img-wrap
     width: 265px
     overflow: hidden
+
+    +mw(768)
+      align-self: center
 
   &__img
     display: block
@@ -92,6 +134,9 @@
     box-shadow: 10px 10px 20px #F7F1EC
     border-radius: 5px
 
+    +mw(768)
+      width: 100%
+
     & + li
       margin-top: 10px
 
@@ -106,3 +151,8 @@
     font-family: PTSerif,Arial,sans-serif
     font-weight: 400
     margin-bottom: 24px
+
+  &__col
+
+    +mw(768)
+      margin-bottom: 60px

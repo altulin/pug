@@ -4,7 +4,7 @@
   box-sizing: inherit
 
 *
-  // outline: 1px solid tomato
+  outline: 1px solid tomato
 
 html
   box-sizing: border-box
@@ -87,3 +87,14 @@ a
 
 .hover-opacity:hover
   opacity: 0.5
+
+.tablet-visibility
+  display: none
+
+  +mw(768)
+    display: block
+
+.desktop-visibility
+
+  +mw(768)
+    display: none
