@@ -8,6 +8,7 @@ const projectJsMin = `script.min.js`; // файл в продакшн миниф
 
 // установленные библиотеки js
 const jquery_js = `node_modules/jquery/dist/jquery.min.js`;
+const mmenu_js = `node_modules/mmenu-light/dist/mmenu-light.js`;
 
 // css
 const sourceCss = `${sourceFolder}/sass/style.sass` // файл для разработки Пользовательские стили
@@ -16,6 +17,7 @@ const projectCssMin = `style.min.css`; // файл в продакшн мини�
 
 // установленные библиотеки css
 const normalize_css = `node_modules/normalize.css/normalize.css`;
+const mmenu_css = `node_modules/mmenu-light/dist/mmenu-light.css`;
 
 // img
 const sourceImg = `${sourceFolder}/_img/**/*`;//папка для разработки
@@ -86,6 +88,7 @@ function browsersync() {
 function scripts() {
   return src([ // Берём файлы из источников
     jquery_js,
+    mmenu_js,
     path.src.libs_js, // библиотеки из папки libs
     sourceJs, // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
@@ -103,6 +106,7 @@ function scripts() {
 function styles() {
   return src([// Выбираем источникИ
     normalize_css,
+    mmenu_css,
     path.src.libs_css,
     sourceCss
 

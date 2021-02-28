@@ -24,5 +24,6 @@ header.header
         li.nav__item.header__get.desktop-visibility
           p.header__get-text Получить<br>консультацию
 
-
-      button.header__open.hidden(type='button' area-label="открыть меню")
+    a.header__open.phone-visibility(href="#main-nav" area-label="открыть меню")
+      +svg(`menu-open`, `header__open-icon`)
+      //- button.header__open.phone-visibility(type='button' area-label="открыть меню")

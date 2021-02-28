@@ -3,12 +3,19 @@
   z-index: 5
   position: relative
 
+  +mw(600)
+    margin-bottom: 0
+
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
     padding-top: 55px
     padding-bottom: 55px
+
+    +mw(600)
+      padding-top: 0
+      padding-bottom: 0
 
   &__logo
     font-size: rem(16)
@@ -39,6 +46,24 @@
     font-weight: 500
     font-size: rem(14)
     line-height: rem(16)
+
+  &__open
+    width: 60px
+    height: 60px
+    transform: translateX(15px)
+
+    +mw(600)
+      display: flex
+      align-items: center
+      justify-content: center
+
+    &-icon
+      width: 20px
+      height: 14px
+      fill: #4D545B
+
+  &__social
+    display: flex
 
 .container
   max-width: 1170px
@@ -105,3 +130,48 @@
   &__list
     display: flex
     align-items: center
+
+#main-nav
+
+  & .header__social
+    display: flex
+
+  .social
+
+    & a
+      width: 32px
+      line-height: normal
+      display: flex
+
+    & svg
+
+    &__link--tg
+      background-image: linear-gradient(203.2deg, #37AEE2 21.67%, #1E96C8 70%)
+
+    &__link--viber
+      background-color: #7F4DA0
+
+    &__link--whatsapp
+      background-color: #25D366
+
+.mm-ocd__content
+  width: 100%
+  max-width: none
+  top: 60px
+  pointer-events: auto
+
+.mm-ocd--open
+  background-color: transparent
+  pointer-events: none
+
+.mm-spn.mm-spn--light
+  color: $text
+  background: #fff
+
+.mm-spn.mm-spn--navbar ul
+  top: 0
+
+.mm-ocd--left .mm-ocd__backdrop
+  right: 0
+  min-width: auto
+  width: 0

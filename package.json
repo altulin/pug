@@ -29,6 +29,7 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.5.1",
+    "mmenu-light": "^3.0.8",
     "node-normalize-scss": "^8.1.2"
   },
   "dependencies": {}
