@@ -62,8 +62,27 @@
       height: 14px
       fill: #4D545B
 
+  &__close
+    width: 60px
+    height: 60px
+    transform: translateX(15px)
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &-icon
+      width: 16px
+      height: 16px
+      fill: #4D545B
+
   &__social
     display: flex
+
+  &__title
+    font-weight: 600
+    padding-left: 30px
+    padding-top: 40px
+    padding-bottom: 40px
 
 .container
   max-width: 1170px
@@ -77,10 +96,14 @@
     width: 51px
     height: 40px
 
+    &-wrap
+      pointer-events: none
+
   &__text
     margin-left: 2px
     color: $text
     font-weight: 500
+    pointer-events: none
 
 .social
   display: flex
@@ -133,15 +156,41 @@
 
 #main-nav
 
+  & .nav__link
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 30px
+    font-weight: 600
+
   & .header__social
     display: flex
+    justify-content: flex-start
+
+    +mw(600)
+      padding-top: 40px
+      padding-left: 30px
+
+  & .header__get
+
+    +mw(600)
+      display: none
 
   .social
 
     & a
-      width: 32px
       line-height: normal
       display: flex
+      padding: 0
+
+      +mw(600)
+        width: 40px
+        height: 40px
+
+        &::after
+          content: none
+
+        & + a
+          margin-left: 16px
 
     & svg
 
@@ -175,3 +224,6 @@
   right: 0
   min-width: auto
   width: 0
+
+.mm-spn li:before
+  content: none

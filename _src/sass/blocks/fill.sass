@@ -1,0 +1,244 @@
+.fill
+  background-color: #F7F7F9
+  padding-top: 60px
+  padding-bottom: 120px
+
+  &__title
+    margin-bottom: 40px
+    font-family: PTSerif,Arial,sans-serif
+    font-weight: 400
+
+  &__inner
+
+  &__content
+    display: flex
+    margin-bottom: 12px
+
+  &__form
+    max-width: 650px
+    background-color: #fff
+    border-radius: 10px 0px 10px 10px
+    border: 1px solid #E0E3EE
+    padding: 60px
+    flex-grow: 1
+
+.container
+
+.size-3
+
+.fill-form
+
+  &__slider
+
+  &__field
+    margin-bottom: 60px
+
+  &__title
+    font-weight: 500
+    margin-bottom: 30px
+
+  &__box
+
+    & + div
+      margin-top: 30px
+
+  &__label
+    display: block
+    width: 100%
+
+    & span
+      font-size: 0
+      display: block
+
+  &__input
+    width: 100%
+    padding: 20px
+    background-color: #F7F7F9
+    border: 1px solid #E0E3EE
+    border-radius: 4px
+
+    &:hover
+      background-color: #fafafb
+
+    &::placeholder
+      font-weight: 500
+      color: #9399A1
+      font-size: rem(16)
+      line-height: rem(20)
+
+    &:focus
+      outline: none
+
+  &__select-wrap
+    position: relative
+
+    &::after
+      position: absolute
+      content: ""
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+      width: 6px
+      height: 12px
+      background-image: url(/img/svg/select-arr.svg)
+
+  &__select
+    appearance: none
+    background-color: #F7F7F9
+    border: 1px solid #E0E3EE
+    border-radius: 4px
+    width: 100%
+    font-weight: 500
+    color: #9399A1
+    font-size: rem(16)
+    line-height: rem(20)
+    padding: 19px
+    outline: none
+    position: relative
+
+    & option
+      padding-top: 25px
+      padding-bottom: 5px
+      font-size: rem(16)
+      // line-height: rem(32)
+      color: $text
+      font-weight: 600
+
+      &:hover
+        box-shadow: 0 0 10px 100px #1882A8 inset
+
+    & option:disabled
+      display: none
+
+    &:focus
+      outline: none
+
+  &__option
+
+  &__btn
+    background: #D0AE96
+    border-radius: 4px
+    padding: 20px 0
+    text-align: center
+    font-size: rem(16)
+    line-height: rem(20)
+    font-weight: 600
+    color: #fff
+    width: 100%
+    border: none
+    cursor: pointer
+    margin-bottom: 40px
+
+    &:focus
+      outline: none
+
+  &__text
+    font-size: rem(12)
+    line-height: rem(16)
+
+  &__ofert
+    color: #D0AE96
+    text-decoration: underline
+
+.slider
+
+  &__item
+    display: none
+
+    &--visually
+      display: block
+
+.box
+  display: flex
+  justify-content: space-between
+
+  &__inner
+    // flex-grow: 1
+
+  &__inner--tiny
+    max-width: 120px
+    flex-grow: 1
+    margin-right: 10px
+
+  &__inner--half
+    width: calc(50% - 5px)
+
+  &__inner--third
+    width: calc((100% / 3) - (20px / 3))
+
+  &__inner--wide
+    flex-grow: 1
+
+.fill
+
+  &__tabs
+    width: 280px
+    border: 1px solid #E0E3EE
+    border-left: none
+    border-radius: 0px 10px 10px 0px
+    align-self: flex-start
+    overflow: hidden
+
+.fill-tabs
+
+  &__item
+
+  &__btn
+    font-weight: 500
+    color: #9399A1
+    background-color: rgba(255, 255, 255, 0.5)
+    border: none
+    padding-left: 74px
+    padding-top: 34px
+    padding-bottom: 35px
+    width: 100%
+    text-align: start
+    cursor: pointer
+    position: relative
+
+    &::after
+      position: absolute
+      width: 24px
+      height: 24px
+      background: #EEEEF4
+      border: 1px solid #E0E3EE
+      border-radius: 50%
+      left: 30px
+      top: 50%
+      transform: translateY(-50%)
+      font-weight: 500
+      font-size: rem(14)
+      line-height: rem(16)
+      display: flex
+      align-items: center
+      justify-content: center
+
+      color: #9399A1
+
+    &:focus
+      outline: none
+
+    &--active
+      color: $text
+      background-color: rgba(255, 255, 255, 1)
+
+      &::after
+        background: #D3B29B
+        color: $white
+
+  &__btn-my
+
+    &::after
+      content: "1"
+
+  &__btn-defendant
+    border-top: 1px solid #E0E3EE
+
+    &::after
+      content: "2"
+
+  &__btn-child
+    border-top: 1px solid #E0E3EE
+
+    &::after
+      content: "3"

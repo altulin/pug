@@ -4,7 +4,7 @@
   box-sizing: inherit
 
 *
-  outline: 1px solid tomato
+  // outline: 1px solid tomato
 
 html
   box-sizing: border-box
@@ -52,6 +52,16 @@ select,
 a
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
+fieldset
+  padding: 0
+  border: none
+
+button,
+input
+
+  &:focus
+    outline: none
+
 .size-1
   font-size: rem(18)
   line-height: rem(24)
@@ -83,8 +93,11 @@ a
     margin-left: 20px
     margin-right: 20px
 
-.hover-opacity:hover
-  opacity: 0.5
+.hover-opacity
+  transition: 0.2s
+
+  &:hover
+    opacity: 0.5
 
 .tablet-visibility
   display: none

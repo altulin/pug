@@ -1,18 +1,28 @@
 header.header
   .header__inner.container
-    a(href="#").header__logo.logo
+    a.header__logo.logo(href="index.html")
       figure.logo__img-wrap
         +img(`logo`, `png`, `logo`, `logo__img`, `51`)
       span.logo__text isk online
+
 
     .header__content
       p.header__content-text сервис от семейного юриста
       a.header__content-link(href="https://gordilezha.ru/" target="_blank" rel="noopener") Алексея Гордилежи
 
 
-
     nav.header__nav.nav#main-nav
       ul.nav__list
+        li.nav__item.phone-visibility
+          p.header__title.size-2 Поможем подготовить<br>и&nbsp;подать заявление в&nbsp;суд<br>без личной встречи с&nbsp;юристом
+
+        li.nav__item.phone-visibility
+          a.nav__link.size-1(href="#marriage") Заявление в суд<br> о расторжении брака
+
+        li.nav__item.phone-visibility
+          a.nav__link.size-1(href="#alimony") Заявление в суд о взыскании<br> аллиментов на ребенка
+
+
         li.nav__item.header__social.social
           a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
             +svg(`tg`, `social__tg`)
@@ -21,9 +31,12 @@ header.header
           a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
             +svg(`wa`, `social__wa`)
 
-        li.nav__item.header__get.desktop-visibility
+        li.nav__item.header__get.tablet-hidden
           p.header__get-text Получить<br>консультацию
 
     a.header__open.phone-visibility(href="#main-nav" area-label="открыть меню")
       +svg(`menu-open`, `header__open-icon`)
+
+    a.header__close.phone-visibility.hidden(href="#" area-label="закрыть меню")
+      +svg(`menu-close`, `header__close-icon`)
       //- button.header__open.phone-visibility(type='button' area-label="открыть меню")

@@ -30,7 +30,8 @@
     "gulp-webp": "^4.0.1",
     "jquery": "^3.5.1",
     "mmenu-light": "^3.0.8",
-    "node-normalize-scss": "^8.1.2"
+    "node-normalize-scss": "^8.1.2",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {}
 }

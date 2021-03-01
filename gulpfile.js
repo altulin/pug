@@ -2,25 +2,29 @@ const projectFolder = `dist`; //Папка продакшн
 const sourceFolder = `_src`;  // Папка разработки
 
 // js
-const sourceJs = `${sourceFolder}/js/app.js`; // файл для разработки Пользовательские скрипты
+const sourceJs = `${sourceFolder}/js/main.js`; // файл для разработки Пользовательские скрипты
 const projectJs = `script.js`; // файл в продакшн
 const projectJsMin = `script.min.js`; // файл в продакшн минифицированный
 
 // установленные библиотеки js
 const jquery_js = `node_modules/jquery/dist/jquery.min.js`;
 const mmenu_js = `node_modules/mmenu-light/dist/mmenu-light.js`;
+// const slick_js = `node_modules/slick-carousel/slick/slick.min.js`;
 
 // css
 const sourceCss = `${sourceFolder}/sass/style.sass` // файл для разработки Пользовательские стили
-const projectCss = `style.css`; // файл в продакшн
+// const projectCss = `style.css`; // файл в продакшн
 const projectCssMin = `style.min.css`; // файл в продакшн минифицированный
 
 // установленные библиотеки css
 const normalize_css = `node_modules/normalize.css/normalize.css`;
 const mmenu_css = `node_modules/mmenu-light/dist/mmenu-light.css`;
 
+// const slick_css = `node_modules/slick-carousel/slick/slick.css`;
+// const slick_theme_css = `node_modules/slick-carousel/slick/slick-theme.css`;
+
 // img
-const sourceImg = `${sourceFolder}/_img/**/*`;//папка для разработки
+// const sourceImg = `${sourceFolder}/_img/**/*`;//папка для разработки
 const projectImg = `${sourceFolder}/img/**/*`;// папка в продакшн
 
 
@@ -89,6 +93,7 @@ function scripts() {
   return src([ // Берём файлы из источников
     jquery_js,
     mmenu_js,
+    // slick_js,
     path.src.libs_js, // библиотеки из папки libs
     sourceJs, // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
@@ -107,6 +112,8 @@ function styles() {
   return src([// Выбираем источникИ
     normalize_css,
     mmenu_css,
+    // slick_css,
+    // slick_theme_css,
     path.src.libs_css,
     sourceCss
 
@@ -216,7 +223,7 @@ function createWebp() {
 
 function startwatch() {
   watch([
-    `${sourceFolder}/js/*.js`,
+    `${sourceFolder}/js/**/*.js`,
     `!${sourceFolder}/js/${projectJs}`,
     `!${sourceFolder}/js/${projectJsMin}`
   ], scripts);// Выбираем все файлы JS в проекте, а затем исключим

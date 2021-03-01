@@ -19,7 +19,7 @@
 </html>
 <body class="page-body">
   <header class="header">
-    <div class="header__inner container"><a class="header__logo logo" href="#">
+    <div class="header__inner container"><a class="header__logo logo" href="index.html">
         <figure class="logo__img-wrap">
           <picture>
             <source srcset="/img/webp/logo.webp" type="image/webp"/><img class="logo__img" src="/img/logo.png" alt="logo" width="51" loading="lazy"/>
@@ -30,6 +30,11 @@
       </div>
       <nav class="header__nav nav" id="main-nav">
         <ul class="nav__list">
+          <li class="nav__item phone-visibility">
+            <p class="header__title size-2">Поможем подготовить<br>и&nbsp;подать заявление в&nbsp;суд<br>без личной встречи с&nbsp;юристом</p>
+          </li>
+          <li class="nav__item phone-visibility"><a class="nav__link size-1" href="#marriage">Заявление в суд<br> о расторжении брака</a></li>
+          <li class="nav__item phone-visibility"><a class="nav__link size-1" href="#alimony">Заявление в суд о взыскании<br> аллиментов на ребенка</a></li>
           <li class="nav__item header__social social"><a class="social__link social__link--tg" href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener">мы в телеграмм
               <svg class="social__tg">
                 <use xlink:href="../img/sprite.svg#tg"></use>
@@ -40,13 +45,16 @@
               <svg class="social__wa">
                 <use xlink:href="../img/sprite.svg#wa"></use>
               </svg></a></li>
-          <li class="nav__item header__get desktop-visibility">
+          <li class="nav__item header__get tablet-hidden">
             <p class="header__get-text">Получить<br>консультацию</p>
           </li>
         </ul>
       </nav><a class="header__open phone-visibility" href="#main-nav" area-label="открыть меню">
         <svg class="header__open-icon">
           <use xlink:href="../img/sprite.svg#menu-open"></use>
+        </svg></a><a class="header__close phone-visibility hidden" href="#" area-label="закрыть меню">
+        <svg class="header__close-icon">
+          <use xlink:href="../img/sprite.svg#menu-close"></use>
         </svg></a>
     </div>
   </header>
@@ -211,5 +219,5 @@
       <div class="page-footer__col page-footer__col--right"> <a class="page-footer__link hover-opacity" href="#">Оплата и возврат</a><a class="page-footer__link hover-opacity" href="#">Договор оферта</a><a class="page-footer__link hover-opacity" href="#">Политика конфиденциальности</a></div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" type="module"></script>
 </body>
