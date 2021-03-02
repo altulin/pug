@@ -1,0 +1,73 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+
+
+block content
+
+  section.create 
+    .create__inner.container 
+
+      ul.create__breadcrumbs.breadcrumbs
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="index.html") Главная
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="index.html") Тип иска
+        li.breadcrumbs__item 
+          a.breadcrumbs__link Тарифный план 
+        li.breadcrumbs__item 
+          a.breadcrumbs__link Данные заявления 
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.breadcrumbs__link--current Получить заявление
+      
+      h1.create__title.title.size-4 Создание заявления
+
+      ul.create__path.path 
+
+        li.path__item 
+          .path__head 
+            p.path__name Тип иска:
+            a.path__link.hover-opacity(href="index.html") Изменить
+          p.path__text  Заявление в суд о выскании алиментов на ребенка
+        
+        li.path__item
+          .path__head 
+            p.path__name Тип иска:
+            a.path__link Изменить
+          p.path__text  Мы готовим и помогаем вам подать заявление в суд 5&nbsp;000₽ 
+
+        li.path__item.path__item
+          .path__head 
+            p.path__name Данные заявления
+            a.path__link Изменить
+          p.path__text  Внимательно заполните все необходимые поля для формирования заявления 
+
+        li.path__item.path__item--end.path__item--current
+          figure.path__img-wrap 
+            +img(`hands`, `png`, ``, `card__img`, `71`)
+          p.path__text  Получите завяление согласно выбранному тарифному плану
+
+  section.simple 
+    .simple__inner.container 
+      .simple__col.simple__col--left
+        .card__head
+          figure.card__img-wrap
+            +img(`hands`, `png`, ``, `card__img`, `155`)
+          h3.card__title.size-3 Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка
+
+        .choose__item
+          h3.plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
+
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Шаблон заявления (2021 г. редакции)
+          
+          .plan__price 
+            p.plan__sum.size-1 0 ₽
+            a.plan__link(href="alimenty-step-5.html") Выбрать тариф
+
+      .simple__col.simple__col--right
+        form.simple-form(name="alimony-simple" metod="get" acton="#")
+          

@@ -57,14 +57,20 @@
     border: 1px solid #E0E3EE
     border-radius: 4px
 
-    &:hover
-      background-color: #fafafb
-
     &::placeholder
       font-weight: 500
       color: #9399A1
       font-size: rem(16)
       line-height: rem(20)
+
+    &--not-valid
+      border-color: #f1484a
+
+      &::placeholder
+        color: #f1484a
+
+    &:hover
+      background-color: #fafafb
 
     &:focus
       outline: none
@@ -81,6 +87,7 @@
       width: 6px
       height: 12px
       background-image: url(/img/svg/select-arr.svg)
+      z-index: 10
 
   &__select
     appearance: none
@@ -92,7 +99,7 @@
     color: #9399A1
     font-size: rem(16)
     line-height: rem(20)
-    padding: 19px
+    // padding: 19px
     outline: none
     position: relative
 
@@ -242,3 +249,72 @@
 
     &::after
       content: "3"
+
+.jq-selectbox__trigger
+  display: none
+
+.jq-selectbox__select
+  padding: 0
+  height: auto
+  border: none
+  text-shadow: none
+  background-image: none
+  box-shadow: none
+
+  &:focus
+    outline: none
+
+  &:active
+    background-color: transparent
+    box-shadow: none
+
+  &:hover
+    background-image: none
+    background-color: #fafafb
+
+.jq-selectbox__select-text
+  font-size: rem(16)
+  line-height: rem(20)
+  font-weight: 500
+  +font(Gilroy)
+  padding: 19px
+
+  &:focus
+    outline: none
+
+.jq-selectbox.focused
+
+  & .jq-selectbox__select
+    border: none
+
+.jq-selectbox li
+  font-size: rem(16)
+  line-height: rem(20)
+  font-weight: 500
+  +font(Gilroy)
+  padding-top: 5px
+  padding-left: 20px
+  padding-bottom: 5px
+
+.jq-selectbox li:hover
+  background-color: #f0f0f4
+  color: $black
+
+.jq-selectbox li.selected
+  background-color: #f0f0f4
+  color: $black
+
+.jq-selectbox__dropdown
+  width: 100% !important
+  top: 100% !important
+  // max-height: 200px !important
+  // overflow-y: scroll
+
+.jq-selectbox ul
+  max-height: 200px
+
+.fill-form__input--not-valid
+  border-color: #f1484a
+
+  & .jq-selectbox__select-text
+    color: #f1484a
