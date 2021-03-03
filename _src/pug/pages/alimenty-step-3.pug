@@ -131,18 +131,54 @@ block content
 
                 .fill-form__box
                   label.fill-form__label 
-                    span Ваша Фамилия
+                    span Фамилия ответчика
                     input(type="text" name="defendant-surname" placeholder="Фамилия ответчика ").fill-form__input
                 
                 .fill-form__box
                   label.fill-form__label 
-                    span Ваше Имя
-                    input(type="text" name="my-name" placeholder="Имя ответчика").fill-form__input
+                    span Имя ответчика
+                    input(type="text" name="defendant-name" placeholder="Имя ответчика").fill-form__input
                 
                 .fill-form__box
                   label.fill-form__label 
-                    span Ваше Отчество
+                    span Отчество ответчика
                     input(type="text" name="defendant-second-name" placeholder="Отчество ответчика").fill-form__input
+
+              fieldset.fill-form__field
+                legend.fill-form__title.size-1 Дата рождения ответчика
+
+                .fill-form__box.box 
+                  .box__inner--third
+                    label.fill-form__label(for="defendant-day") 
+                      span День
+                    .fill-form__select-wrap
+                      
+                      select#defendant-day.fill-form__select(name="defendant-day") 
+                        option(value="День" selected disabled) День 
+                        while n < 32
+                          -const num = n++
+                          option(value=`${num}`)= num
+
+
+                  .box__inner--third
+                    label.fill-form__label(for="defendant-month") 
+                      span Месяц
+                    .fill-form__select-wrap
+                      select#defendant-month.fill-form__select(name="defendant-month") 
+                        option(value="День" selected disabled) Месяц
+                        each val, index in months
+                          option(value=`${index+ 1}`)= val
+
+                  .box__inner--third
+                    label.fill-form__label(for="defendant-year") 
+                      span Год
+                    .fill-form__select-wrap
+                      select#defendant-year.fill-form__select(name="defendant-year")
+                        option(value="Год" selected disabled) Год
+                        while start_year < end_year
+                          -const num = start_year++
+                          option(value=`${num}`)= num
+
 
               fieldset.fill-form__field 
                 legend.fill-form__title.size-1 Адрес фактического или последнего места жительства
@@ -280,11 +316,11 @@ block content
 
                 
         ul.fill__tabs.fill-tabs 
-          li.fill-tabs__item 
+          li.fill-tabs__item
             button.fill-tabs__btn.fill-tabs__btn--active.size-1.fill-tabs__btn-my(type="button") Ваши данные 
-          li.fill-tabs__item 
+          li.fill-tabs__item.fill-tabs__item--disabled
             button.fill-tabs__btn.size-1.fill-tabs__btn-defendant(type="button") Данные ответчика 
-          li.fill-tabs__item 
+          li.fill-tabs__item.fill-tabs__item--disabled 
             button.fill-tabs__btn.size-1.fill-tabs__btn-child(type="button") Данные детей
                 
                 

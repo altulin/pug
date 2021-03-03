@@ -1,0 +1,170 @@
+.simple
+  padding-top: 80px
+  padding-bottom: 120px
+  background: #F7F7F9
+
+  +mw(600)
+    padding-top: 60px
+    padding-bottom: 80px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column
+
+  &__col--left
+    // flex-grow: 1
+    width: 50%
+    max-width: 420px
+
+    +mw(768)
+      max-width: none
+      width: 100%
+      margin-bottom: 30px
+
+  &__head
+    background: #ffffff79
+    border: 1px solid #3a415c
+    border-radius: 10px
+    display: flex
+    align-items: center
+    padding-top: 23px
+    padding-bottom: 23px
+    padding-left: 130px
+    position: relative
+    margin-bottom: 22px
+
+    +mw(768)
+      padding-left: 15px
+      padding-right: 15px
+
+      & br
+        display: none
+
+  &__img-wrap
+    width: 102px
+    height: 80px
+    position: absolute
+    bottom: 0
+    left: 28px
+
+    +mw(768)
+      display: none
+
+  &__title
+    +font(PTSerif)
+    font-weight: 400
+
+  &__col--right
+    max-width: 650px
+    flex-grow: 1
+    margin-left: 20px
+
+    +mw(768)
+      max-width: none
+      margin-left: 0
+
+.simple-plan
+  background: #FFFFFF
+  border: 1px solid #E4E7F0
+  border-radius: 5px
+  padding-top: 45px
+  padding-left: 50px
+  padding-right: 50px
+  padding-bottom: 30px
+
+  +mw(768)
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 30px
+
+  &__title
+    font-weight: 500
+    margin-bottom: 30px
+
+    mark
+      color: #d0ae96
+      background-color: transparent
+
+  &__list
+    margin-bottom: 30px
+
+  &__item
+    background: #FBF9F8
+    border-radius: 4px
+    padding-left: 15px
+    padding-top: 10px
+    padding-bottom: 10px
+    display: flex
+    align-items: center
+
+  &__text
+    font-weight: 500
+    margin-left: 15px
+
+.simple-form
+  background: #FFFFFF
+  border: 1px solid #E0E3EE
+  border-radius: 10px
+  padding-top: 60px
+  padding-left: 60px
+  padding-right: 60px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  height: 100%
+
+  +mw(768)
+    padding-top: 30px
+    padding-left: 15px
+    padding-right: 15px
+    padding-bottom: 20px
+
+  &__legend
+    font-weight: 500
+    margin-bottom: 30px
+
+  &__label
+    span
+      font-size: 0
+
+  &__input
+    background: #F7F7F9
+    border: 1px solid #E0E3EE
+    border-radius: 4px
+    padding-top: 20px
+    padding-left: 20px
+    padding-bottom: 20px
+    padding-right: 20px
+    width: 100%
+
+    &::placeholder
+      font-size: rem(16)
+      line-height: rem(20)
+      font-weight: 500
+      color: #9399A1
+
+  &__btn
+    background: #D0AE96
+    border-radius: 4px
+    font-weight: 500
+    font-size: rem(16)
+    line-height: rem(20)
+    padding: 20px
+    color: #FFFFFF
+    cursor: pointer
+    margin-top: auto
+    margin-bottom: 20px
+
+    +mw(768)
+      margin-top: 60px
+
+  &__text
+    font-size: rem(12)
+    line-height: rem(16)
+
+  &__ofert
+    color: #d0ae96
+    text-decoration: underline

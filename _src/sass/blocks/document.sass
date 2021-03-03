@@ -1,0 +1,108 @@
+.doc
+
+  &__inner
+
+  &__breadcrumbs
+
+  &__content
+
+  &__title
+    font-weight: 600
+    margin-bottom: 20px
+
+  &__text
+    font-size: rem(18)
+    line-height: rem(24)
+
+    &--note
+      color: #90969E
+
+    &--head
+      // margin-bottom: 60px
+
+    & + p
+      margin-top: 20px
+
+    & + h3
+      margin-top: 60px
+
+  &__line
+    height: 1px
+    display: block
+    background-color: #E0E3EE
+    box-sizing: border-box
+    margin-top: 33px
+    margin-bottom: 33px
+
+.container
+
+.doc-breadcrumbs
+  display: flex
+  margin-bottom: 30px
+
+  &__item
+
+    + li
+      padding-left: 30px
+      position: relative
+
+      &::after
+        content: ""
+        position: absolute
+        left: 10px
+        top: 50%
+        transform: translateY(-50%)
+        width: 10px
+        height: 10px
+        background-image: url(../img/svg/path.svg)
+
+  &__link
+    font-size: rem(14)
+    line-height: rem(16)
+
+    &--current
+      color: #9399A1
+
+.hover-opacity
+
+.size-3
+
+.doc
+
+  &__list
+
+.doc-pay
+  display: flex
+  justify-content: space-between
+  margin-bottom: 36px
+
+  +mw(768)
+    flex-direction: column
+    align-items: center
+
+  &__item
+    background: rgba(255, 255, 255, 0.6)
+    border: 1px solid #E0E3EE
+    border-radius: 8px
+    width: calc((100% / 3) - (20px / 3))
+    padding-top: 40px
+    padding-bottom: 26px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +mw(768)
+      width: 100%
+      max-width: 400px
+      margin-bottom: 20px
+
+  &__wrap-img
+    margin-bottom: 28px
+
+  &__img
+    display: block
+
+  &__text
+    font-size: rem(14)
+    line-height: rem(16)
+    color: #90969E

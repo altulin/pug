@@ -3,7 +3,10 @@ include ../helpers/mixins.pug
 
 
 
+
+
 block content
+  
 
   section.create 
     .create__inner.container 
@@ -50,24 +53,33 @@ block content
   section.simple 
     .simple__inner.container 
       .simple__col.simple__col--left
-        .card__head
-          figure.card__img-wrap
-            +img(`hands`, `png`, ``, `card__img`, `155`)
-          h3.card__title.size-3 Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка
+        .simple__head
+          figure.simple__img-wrap
+            +img(`hands`, `png`, ``, `card__img`, `102`)
+          h3.simple__title.size-3 Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка
 
-        .choose__item
-          h3.plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
+        .simple__item.simple-plan
+          h3.simple-plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
 
-          ul.plan__list 
-            li.plan__item 
-              figure.plan__img-wrap 
-                +img(`isk`, `png`, ``, `plan__img`, `40`)
-              p.plan__text Шаблон заявления (2021 г. редакции)
+          ul.simple-plan__list 
+            li.simple-plan__item 
+              figure.simple-plan__img-wrap 
+                +img(`isk`, `png`, ``, `simple-plan__img`, `40`)
+              p.simple-plan__text Шаблон заявления (2021 г. редакции)
           
-          .plan__price 
-            p.plan__sum.size-1 0 ₽
-            a.plan__link(href="alimenty-step-5.html") Выбрать тариф
+          .simple-plan__price 
+            p.simple-plan__sum.size-1 0 ₽
 
       .simple__col.simple__col--right
         form.simple-form(name="alimony-simple" metod="get" acton="#")
-          
+          fieldset.simple-form__fieldset 
+            legend.simple-form__legend.size-1 Получите шаблон заявления оставив ваш e-mail
+            .simple-form__box
+              label.simple-form__label 
+                span Введите email
+                input(type="email" name="my-alimony-email" placeholder="Введите email").simple-form__input
+
+          button.simple-form__btn(type="submit") Получить шаблон
+          p.simple-form__text Нажимая на кнопку вы соглашаетесь с 
+            a.simple-form__ofert(href="")  договором-офертой
+    

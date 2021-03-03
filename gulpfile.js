@@ -268,5 +268,5 @@ exports.rename = rename;
 exports.createWebp = createWebp;
 
 
-exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, browsersync, startwatch);
+exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, browsersync, startwatch);
 exports.build = series(clean, styles, scripts, images, buildcopy);

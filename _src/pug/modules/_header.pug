@@ -1,4 +1,4 @@
-header.header
+header.header(class=document ? 'header--document' : '')
   .header__inner.container
     a.header__logo.logo(href="index.html")
       figure.logo__img-wrap
@@ -23,7 +23,7 @@ header.header
           a.nav__link.size-1(href="#alimony") Заявление в суд о взыскании<br> аллиментов на ребенка
 
 
-        li.nav__item.header__social.social
+        li.nav__item.header__social.social.social--document
           a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
             +svg(`tg`, `social__tg`)
           a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер

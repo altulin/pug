@@ -84,10 +84,22 @@
     padding-top: 40px
     padding-bottom: 40px
 
+  &--document
+    margin-bottom: 0
+
+    & .nav__list .social--document
+      display: none
+
+    & .header__get
+      display: none
+
+    & .header__inner
+      padding-bottom: 34px
+
 .container
-  max-width: 1170px
-  margin-left: auto
-  margin-right: auto
+  // max-width: 1170px
+  // margin-left: auto
+  // margin-right: auto
 
 .logo
 
@@ -154,7 +166,8 @@
     display: flex
     align-items: center
 
-#main-nav
+// #main-nav
+.header__nav
 
   & .nav__link
     padding-top: 20px
@@ -165,6 +178,13 @@
   & .header__social
     display: flex
     justify-content: flex-start
+
+    +mw(600)
+      padding-left: 30px
+      padding-top: 30px
+
+  & .hidden
+    display: none
 
     +mw(600)
       padding-top: 40px

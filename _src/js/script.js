@@ -104,30 +104,47 @@ $(function () {
 
   // проверка заполнения
   $(`.fill-form__btn`).on(`click`, (e) => {
-    let hasError = false
+    let validState = true
+    e.preventDefault()
+
     $(e.target).parent().find(`input, select`).each((i, item) => {
       $(item).removeClass(`fill-form__input--not-valid`);
       $(item).parent().removeClass(`fill-form__input--not-valid`);
-      console.log($(`#my-number-home`).val())
 
-      if ($(item).val().length === undefined || $(item).val() === null) {
-        e.preventDefault()
-        hasError = true
 
-        if ($(item).has(`fill-form__select`)) {
-          $(item).parent().addClass(`fill-form__input--not-valid`)
-        }
+      // if ($(item).val().length === 0 || $(item).val() === null) {
 
-        $(item).addClass(`fill-form__input--not-valid`)
-      } else {
-        hasError = false
-      }
+      //   validState = false
+
+      //   if ($(item).has(`fill-form__select`)) {
+      //     $(item).parent().addClass(`fill-form__input--not-valid`)
+      //   }
+
+      //   $(item).addClass(`fill-form__input--not-valid`)
+      // }
+
+
     });
 
-    if (!hasError) {
-      // console.log($(e.target).parent().next())
-      $(e.target).parent().removeClass(`slider__item--visually`)
+    if (validState) {
+
+      if ($(e.target).hasClass(`fill-form__btn--submit`)) {
+        // console.log(e.target)
+
+      } else {
+        console.log($(e.target).parent().next())
+        $(e.target).parent().next().addClass(`slider__item--visually`);
+        $(e.target).parent().removeClass(`slider__item--visually`);
+
+      }
+
+
+
+
+
+
     }
+
 
   });
 

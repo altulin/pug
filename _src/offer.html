@@ -18,7 +18,7 @@
   </head>
 </html>
 <body class="page-body">
-  <header class="header">
+  <header class="header header--document">
     <div class="header__inner container"><a class="header__logo logo" href="index.html">
         <figure class="logo__img-wrap">
           <picture>
@@ -59,87 +59,17 @@
     </div>
   </header>
   <main class="page-main">
-    <section class="create"> 
-      <div class="create__inner container"> 
-        <ul class="create__breadcrumbs breadcrumbs">
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link hover-opacity" href="index.html">Главная</a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link hover-opacity" href="index.html">Тип иска</a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link">Тарифный план </a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link">Данные заявления </a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link breadcrumbs__link--current">Получить заявление</a></li>
+    <section class="doc">
+      <div class="doc__inner container">
+        <ul class="doc__breadcrumbs doc-breadcrumbs">
+          <li class="doc-breadcrumbs__item"><a class="doc-breadcrumbs__link hover-opacity" href="index.html">Главная</a></li>
+          <li class="doc-breadcrumbs__item"><a class="doc-breadcrumbs__link doc-breadcrumbs__link--current hover-opacity" href="ofert.html">Договор оферты</a></li>
         </ul>
-        <h1 class="create__title title size-4">Создание заявления</h1>
-        <ul class="create__path path"> 
-          <li class="path__item"> 
-            <div class="path__head"> 
-              <p class="path__name">Тип иска:</p><a class="path__link hover-opacity" href="index.html">Изменить</a>
-            </div>
-            <p class="path__text"> Заявление в суд о выскании алиментов на ребенка</p>
-          </li>
-          <li class="path__item">
-            <div class="path__head"> 
-              <p class="path__name">Тип иска:</p><a class="path__link">Изменить</a>
-            </div>
-            <p class="path__text"> Мы готовим и помогаем вам подать заявление в суд 5&nbsp;000₽ </p>
-          </li>
-          <li class="path__item path__item">
-            <div class="path__head"> 
-              <p class="path__name">Данные заявления</p><a class="path__link">Изменить</a>
-            </div>
-            <p class="path__text"> Внимательно заполните все необходимые поля для формирования заявления </p>
-          </li>
-          <li class="path__item path__item--end path__item--current">
-            <figure class="path__img-wrap"> 
-              <picture>
-                <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="71" loading="lazy"/>
-              </picture>
-            </figure>
-            <p class="path__text"> Получите завяление согласно выбранному тарифному плану</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="simple"> 
-      <div class="simple__inner container"> 
-        <div class="simple__col simple__col--left">
-          <div class="simple__head">
-            <figure class="simple__img-wrap">
-              <picture>
-                <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="102" loading="lazy"/>
-              </picture>
-            </figure>
-            <h3 class="simple__title size-3">Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка</h3>
-          </div>
-          <div class="simple__item simple-plan">
-            <h3 class="simple-plan__title"><mark>Вы</mark> готовите и подаете заявление в суд самостоятельно</h3>
-            <ul class="simple-plan__list"> 
-              <li class="simple-plan__item"> 
-                <figure class="simple-plan__img-wrap"> 
-                  <picture>
-                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="simple-plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
-                  </picture>
-                </figure>
-                <p class="simple-plan__text">Шаблон заявления (2021 г. редакции)</p>
-              </li>
-            </ul>
-            <div class="simple-plan__price"> 
-              <p class="simple-plan__sum size-1">0 ₽</p>
-            </div>
-          </div>
-        </div>
-        <div class="simple__col simple__col--right">
-          <form class="simple-form" name="alimony-simple" metod="get" acton="#">
-            <fieldset class="simple-form__fieldset"> 
-              <legend class="simple-form__legend size-1">Получите шаблон заявления оставив ваш e-mail</legend>
-              <div class="simple-form__box">
-                <label class="simple-form__label"> <span>Введите email</span>
-                  <input class="simple-form__input" type="email" name="my-alimony-email" placeholder="Введите email">
-                </label>
-              </div>
-            </fieldset>
-            <button class="simple-form__btn" type="submit">Получить шаблон</button>
-            <p class="simple-form__text">Нажимая на кнопку вы соглашаетесь с <a class="simple-form__ofert" href=""> договором-офертой</a></p>
-          </form>
+        <div class="doc__content">
+          <h1 class="doc__title size-3">ДОГОВОР-ОФЕРТА ПРЕДОСТАВЛЕНИЯ УСЛУГ</h1>
+          <p class="doc__text">Настоящий Договор является публичным договором - договором публичной оферты, то есть, в соответствии с Гражданским кодексом РФ, его условия одинаковы для всех покупателей независимо от статуса (физическое лицо, юридическое лицо, физическое лицо - предприниматель). При полном согласии с данным Договором, покупатель принимает условия и порядок оформления заказа, оплаты товара, доставки товара.</p>
+          <p class="doc__text">Настоящий Договор является соглашением между isk-online.ru (Далее по тексту - «Исполнитель») и любым юридическим лицом, физическим лицом-предпринимателем или физическим лицом, пользователем услуг сайта «isk-online.ru», которая в дальнейшем именуется "Заказчик".</p>
+          <p class="doc__text">Это соглашение носит характер публичной оферты, является эквивалентом "устного соглашения" и, в соответствии с действующим законодательством РФ, имеет надлежащую юридическую силу.</p>
         </div>
       </div>
     </section>
