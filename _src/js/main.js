@@ -1,3 +1,4 @@
+// import { css } from 'jquery';
 import { getElementData, getElementName } from './modules/newElements.js';
 
 $(function () {
@@ -8,7 +9,6 @@ $(function () {
   });
 
   //mmenu
-
   const menu = new MmenuLight(
     document.querySelector("#main-nav"),
     "(max-width: 600px)"
@@ -43,9 +43,8 @@ $(function () {
   })
 
 
-  // form
 
-  //tabs
+  //tabs меняем стили при нажатии
   $(`.fill-tabs__btn`).on(`click`, (e) => {
     const index = $(`.fill-tabs__btn`).index(e.target);
 
@@ -61,7 +60,7 @@ $(function () {
 
   })
 
-  //select childrens
+  //select childrens добавляем блоки от кол-ва детей
   $(`#childrens`).on(`change`, (e) => {
     let n = 0;
     const index = $(e.target).val();
@@ -83,56 +82,72 @@ $(function () {
 
   })
 
+
+
   $(`select`).styler();
 
 
-  // проверка заполнения
+  // проверка заполнения валидация
   $(`.fill-form__btn`).on(`click`, (e) => {
     let validState = true
-    e.preventDefault()
+    // e.preventDefault()
 
     $(e.target).parent().find(`input, select`).each((i, item) => {
       $(item).removeClass(`fill-form__input--not-valid`);
       $(item).parent().removeClass(`fill-form__input--not-valid`);
 
 
-      // if ($(item).val().length === 0 || $(item).val() === null) {
+      if ($(item).val().length === 0 || $(item).val() === null) {
 
-      //   validState = false
+        validState = false
+        e.preventDefault()
 
-      //   if ($(item).has(`fill-form__select`)) {
-      //     $(item).parent().addClass(`fill-form__input--not-valid`)
-      //   }
+        if ($(item).has(`fill-form__select`)) {
+          $(item).parent().addClass(`fill-form__input--not-valid`);
+        }
 
-      //   $(item).addClass(`fill-form__input--not-valid`)
-      // }
+        $(item).addClass(`fill-form__input--not-valid`);
+      }
 
 
     });
 
     if (validState) {
 
+      // если отправка формы
       if ($(e.target).hasClass(`fill-form__btn--submit`)) {
-        // console.log(e.target)
+
+
+        // переход на след страницу
+        // const path = $(location).attr('pathname').split(`-`)[0];
+
+        // setTimeout(function () {
+        // window.location.replace(`${path}-step-4.html`);
+
+
+        // }, 1000)
 
       } else {
-        console.log($(e.target).parent().next())
+        e.preventDefault()
+        const indexElem = $(e.target).parent().next().index();
+        $($(`.fill-tabs__item`)[indexElem]).removeClass(`fill-tabs__item--disabled`)
+
+
+        // на табах меняем стили
+        $(`.fill-tabs__btn`).each((i, item) => {
+          $(item).removeClass(`fill-tabs__btn--active`)
+        })
+        $($(`.fill-tabs__item`)[indexElem]).children().addClass(`fill-tabs__btn--active`)
+
+        // скрываем и открываем нужный фрагмент формы
         $(e.target).parent().next().addClass(`slider__item--visually`);
         $(e.target).parent().removeClass(`slider__item--visually`);
-
       }
-
-
-
-
-
-
     }
-
-
   });
 
-  // убрать ошибку
+
+  // убрать ошибку валидации
 
   const delErrorForm = () => {
     $(`input, .jq-selectbox__select`).on(`click`, (e) => {
@@ -143,5 +158,25 @@ $(function () {
 
   delErrorForm();
 
+  // processing кнопка проверить данные
+  $(`.data__link--open`).on(`click`, (e) => {
+    e.preventDefault()
+    $(`.data__link--open`).css('display', 'none');
+    $(`.data-hidden`).css('display', 'block');
+  })
 
+  // processing__form
+  $(`.processing__form`).on(`submit`, (e) => {
+
+    $(`.processing-form__input`).each((i, item) => {
+      if ($(item).val().length === 0) {
+        e.preventDefault()
+        $(item).addClass(`fill-form__input--not-valid`);
+      }
+    })
+  })
+
+  // input mask
+  $(`.input-phone`).mask("(999)999-99-99");
+  $(`.input-code`).mask("+99");
 });

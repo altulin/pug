@@ -31,7 +31,7 @@ block content
           .path__head 
             p.path__name Тип иска:
             a.path__link.hover-opacity(href="index.html") Изменить
-          p.path__text  Заявление в суд о выскании алиментов на ребенка
+          p.path__text  Заявление в суд о&nbsp;расторжении брака
         
         li.path__item
           .path__head 
@@ -56,7 +56,7 @@ block content
         .simple__head
           figure.simple__img-wrap
             +img(`hands`, `png`, ``, `card__img`, `102`)
-          h3.simple__title.size-3 Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка
+          h3.simple__title.size-3 Заявление в суд о&nbsp;расторжении брака
 
         .simple__item.simple-plan
           h3.simple-plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
@@ -71,13 +71,13 @@ block content
             p.simple-plan__sum.size-1 0 ₽
 
       .simple__col.simple__col--right
-        form.simple-form(name="alimony-simple" metod="get" acton="#")
+        form.simple-form(name="marriage-simple" metod="get" acton="#")
           fieldset.simple-form__fieldset 
             legend.simple-form__legend.size-1 Получите шаблон заявления оставив ваш e-mail
             .simple-form__box
               label.simple-form__label 
                 span Введите email
-                input(type="email" name="my-alimony-email" placeholder="Введите email").simple-form__input
+                input(type="email" name="my-marriage-email" placeholder="Введите email").simple-form__input
 
           button.simple-form__btn(type="submit") Получить шаблон
           p.simple-form__text Нажимая на кнопку вы соглашаетесь с 
@@ -91,4 +91,5 @@ block content
             p.download__text Шаблон заявления (2021 г. редакции)
           
           a.download__link(href="#" download) Скачать шаблон
+
     

@@ -1,0 +1,232 @@
+.processing
+  background: #F7F7F9
+  padding-top: 60px
+  padding-bottom: 120px
+
+  +mw(768)
+    padding-bottom: 60px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column
+
+  &__col--left
+    width: 50%
+    max-width: 420px
+
+    +mw(768)
+      max-width: none
+      width: 100%
+      margin-bottom: 45px
+
+  &__data
+    background: #FFFFFF
+    border: 1px solid #E0E3EE
+    border-radius: 10px
+    padding-bottom: 40px
+    margin-bottom: 40px
+
+  &__plan
+    background: #FFFFFF
+    border: 1px solid #E0E3EE
+    border-radius: 10px
+    padding-top: 45px
+    padding-bottom: 30px
+
+    +mw(600)
+      & .plan
+
+        &__title
+          margin-left: 20px
+          margin-right: 20px
+
+        &__list
+          margin-left: 20px
+          margin-right: 20px
+
+        &__price
+          margin-left: 20px
+          margin-right: 20px
+
+  &__col--right
+    background: #FFFFFF
+    border: 1px solid #E0E3EE
+    border-radius: 10px
+    padding: 60px
+    flex-grow: 1
+    max-width: 650px
+    margin-left: 20px
+    align-self: flex-start
+
+    +mw(768)
+      width: 100%
+      margin-left: 0
+      max-width: none
+
+    +mw(600)
+      padding-left: 20px
+      padding-right: 20px
+
+.data
+
+  &__head
+    padding-top: 23px
+    padding-bottom: 23px
+    padding-left: 28px
+    border-bottom: 1px solid #E0E3EE
+
+    +mw(600)
+      padding-left: 20px
+
+  &__list
+    padding-top: 40px
+    padding-bottom: 40px
+    padding-left: 40px
+    padding-right: 40px
+
+    +mw(600)
+      padding-left: 20px
+      padding-right: 20px
+
+  &__item
+    font-size: rem(16)
+    line-height: rem(20)
+    font-weight: 600
+
+    & + li
+      margin-top: 40px
+
+  &__sub-list
+    margin-top: 20px
+
+  &__sub-item
+    font-size: rem(16)
+    line-height: rem(20)
+    font-weight: 500
+    display: flex
+    align-items: center
+
+    & + li
+      margin-top: 5px
+
+  &__term
+    color: #9399A1
+    width: 170px
+
+  &__link
+    display: block
+    border: 1px solid #E0E3EE
+    border-radius: 4px
+    color: #9399A1
+    font-size: rem(16)
+    line-height: rem(20)
+    font-weight: 500
+    padding-top: 20px
+    padding-bottom: 20px
+    text-align: center
+    margin-left: 40px
+    margin-right: 40px
+
+    +mw(600)
+      margin-left: 20px
+      margin-right: 20px
+
+  &__link--back
+
+    & span
+      position: relative
+
+      &::after
+        position: absolute
+        content: ""
+        width: 10px
+        height: 10px
+        transform: translateY(-50%)
+        top: 50%
+        background-image: url(/img/svg/arrow-back.svg)
+        left: -15px
+
+.data-head
+  display: flex
+  align-items: center
+
+  &__img
+    display: block
+
+  &__title
+    font-weight: 400
+    +font(PTSerif)
+
+.data-hidden
+  display: none
+
+.processing-content
+  margin-bottom: 60px
+
+  &__title
+    font-weight: 600
+    margin-bottom: 20px
+
+  &__text
+    font-size: rem(16)
+    line-height: rem(19)
+
+    & + p
+      margin-top: 15px
+
+.processing-form
+
+  &__field
+    margin-bottom: 60px
+
+  &__legend
+    font-weight: 500
+    margin-bottom: 30px
+
+  &__box
+
+    & + div
+      margin-top: 30px
+
+  &__label
+    display: block
+    width: 100%
+
+    & span
+      font-size: 0
+      display: block
+
+  &__input
+    width: 100%
+    padding: 20px
+    background-color: #f7f7f9
+    border: 1px solid #e0e3ee
+    border-radius: 4px
+
+    &.fill-form__input--not-valid
+      border-color: #f1484a
+
+  &__btn
+    background: #d0ae96
+    border-radius: 4px
+    padding: 20px 0
+    text-align: center
+    font-size: 1rem
+    line-height: 1.25rem
+    font-weight: 600
+    color: #fff
+    width: 100%
+    border: none
+    cursor: pointer
+    margin-bottom: 40px
+
+  &__text
+    font-size: .75rem
+    line-height: 1rem
+
+  &__ofert
+    color: #d0ae96
+    text-decoration: underline

@@ -1,0 +1,135 @@
+extends ../templates/_statement.pug
+include ../helpers/mixins.pug
+
+block content
+
+  section.stat 
+    .stat__inner 
+      ul.stat__header.stat-header__list
+        li.stat-header__item 
+          p.stat-header__text.bold Мировому судье судебного участка № <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+          span.stat-header__line.bold 
+        li.stat-header__item
+          ul.stat-header__sub-list
+            li.stat-header__sub-item
+              span.stat-header__text.bold Истец: 
+              u0020
+              span.stat-header__text.stat-my-surname Иванов
+              u0020
+              span.stat-header__text.stat-my-name Иван
+              u0020
+              span.stat-header__text.stat-my-second-name Иванович,
+
+            li.stat-header__sub-item
+              span.stat-header__text Адрес:
+              u0020 
+              span.stat-header__text.stat-my-city Иркутск
+              u0020
+              span.stat-header__text.stat-my-type-street ул.
+              u0020
+              span.stat-header__text.stat-my-street Иркутская,
+              u0020
+              span.stat-header__text.stat-my-number-home д. 0,
+              u0020
+              span.stat-header__text.stat-my-number-flat кв. 0,
+            
+            li.stat-header__sub-item
+              span.stat-header__text тел: 
+              span.stat-header__text.stat-my-phone 89021234567
+
+          ul.stat-header__sub-list
+            li.stat-header__sub-item
+              span.stat-header__text.bold Ответчик:
+              u0020
+              span.stat-header__text.stat-defendant-surname Иванов
+              u0020
+              span.stat-header__text.stat-defendant-name Иван
+              u0020
+              span.stat-header__text.stat-defendant-second-name Иванович,
+
+            li.stat-header__sub-item
+              span.stat-header__text.stat-defendant-day 01.
+              span.stat-header__text.stat-defendant-month 01.
+              span.stat-header__text.stat-defendant-year 2000
+              u0020
+              span.stat-header__text года рождения
+
+            li.stat-header__sub-item
+              span.stat-header__text Адрес: 
+              span.stat-header__text.stat-defendant-city Иркутск
+              u0020
+              span.stat-header__text.stat-defendant-type-street ул.
+              u0020
+              span.stat-header__text.stat-defendant-street Иркутская,
+              u0020
+              span.stat-header__text.stat-defendant-number-home д. 0,
+              u0020
+              span.stat-header__text.stat-defendant-number-flat кв. 0,
+            
+            li.stat-header__sub-item
+              span.stat-header__text тел: 
+              span.stat-header__text.stat-defendant-phone-code +7
+              span.stat-header__text.stat-defendant-phone 9021234567
+
+          ul.stat-header__sub-list
+            li.stat-header__sub-item
+              span.stat-header__text.bold Государственная пошлина: 
+              span.stat-header__text 600 руб.
+              
+              
+      h1.stat__title ИСКОВОЕ ЗАЯВЛЕНИЕ
+      p.stat__head-text о расторжении брака
+      .stat__change-box 
+        p.stat__text Я и ответчик – 
+          span.stat-defendant-surname Иванов
+          u0020
+          span.stat-defendant-name Иван
+          u0020
+          span.stat-defendant-second-name Иванович,
+          u0020
+          span.stat-defendant-day 01.
+          span.stat-defendant-month 01.
+          span.stat-defendant-year 2000 года заключили брак в местном органе регистрации актов гражданского состояния. 
+          
+      p.stat__text На сегодняшний день брачные отношения между нами прекращены, общего хозяйства не ведем.
+      p.stat__text От совместного брака у нас имеется несовершеннолетний ребенок – 
+        span.stat-1-children-surname Иванов
+        u0020
+        span.stat-1-children-name Ивашка
+        u0020
+        span.stat-1-children-second-name Иванович
+        u0020
+        span.stat-1-childrens-day 01.
+        span.stat-1-childrens-month 01.
+        span.stat-1-childrens-year 2000
+        u0020
+        span года рождения
+      p.stat__text Спор о месте жительства ребенка и его воспитании, также, как и спор о содержании несовершеннолетнего ребенка, между нами отсутствуют.
+      p.stat__text Дальнейшее ведение совместного хозяйства и сохранение брачных отношений с ответчиком невозможно. Супружеская жизнь с ответчиком утратила чувства взаимной любви и уважения, которые служат основой для построения семьи. Примирение сторон, заключающееся в налаживании семейной жизни, невозможно, в установленном законом порядке действия, направленные на примирение сторон, оказались безрезультатны.
+      p.stat__text Поскольку в силу сложившихся жизненных обстоятельств дальнейшая совместная жизнь с ответчиком невозможна и единственным разумным выходом из ситуации является расторжение брака.
+      p.stat__text В соответствии с пунктом 2 статьи 16 Семейного кодекса РФ брак может быть прекращен путем его расторжения по заявлению одного из супругов.
+      p.stat__text Расторжение брака производится в судебном порядке при наличии у супругов общих несовершеннолетних детей или при отсутствии согласия одного из супругов на расторжение брака (пункт 1 статьи 21 Семейного кодекса РФ).
+      p.stat__text Согласно пункту 2 статьи 22 Семейного кодекса РФ при рассмотрении дела о расторжении брака при отсутствии согласия одного из супругов на расторжение брака суд вправе принять меры к примирению супругов и вправе отложить разбирательство дела, назначив супругам срок для примирения в пределах трех месяцев.
+      p.stat__text Поскольку указанная в пункте 2 статьи 22 Семейного кодекса РФ мера в виде срока для примирения сторон не принесла результатов, направленных на сохранение семьи, дальнейшая совместная жизнь с ответчиком и сохранение семьи невозможны, настаиваю на расторжении брака без отложения разбирательства дела в рамках указанной нормы.
+      p.stat__text.stat__text--end На основании вышеизложенного, руководствуясь статьями 22, 131 - 132, 198 Гражданского процессуального кодекса РФ,
+
+      p.stat__beg.bold ПРОШУ СУД:
+      p.stat__text.stat__text--end Расторгнуть брак, заключенный 00.00.0000 года в местном органе регистрации актов гражданского состояния, между мной и ответчиком.
+      
+      p.stat__text Приложение:
+      p.stat__text 1. Квитанция об уплате государственной пошлины;
+      p.stat__text 2. Свидетельство о заключении брака;
+      p.stat__text 3. Копия свидетельства о рождении ребенка;
+      p.stat__text 4. Уведомление о вручении копии иска ответчику.
+      p.stat__text 5. Опись вложения копии иска ответчику;
+
+      .stat__signature
+        p.stat__date «<span class="stat__space"></span>»<span class="stat__space stat__space--big"></span>2021 года
+        p.stat__date <span class="stat__space stat__space--big"></span>/<span class="stat__space stat__space--big"></span>/
+
+
+
+
+          
+

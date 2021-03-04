@@ -64,9 +64,7 @@
         <ul class="create__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item"> <a class="breadcrumbs__link hover-opacity" href="index.html">Главная</a></li>
           <li class="breadcrumbs__item"> <a class="breadcrumbs__link hover-opacity" href="index.html">Тип иска</a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link">Тарифный план </a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link">Данные заявления </a></li>
-          <li class="breadcrumbs__item"> <a class="breadcrumbs__link breadcrumbs__link--current">Получить заявление</a></li>
+          <li class="breadcrumbs__item"> <a class="breadcrumbs__link breadcrumbs__link--current">Тарифный план </a></li>
         </ul>
         <h1 class="create__title title size-4">Создание заявления</h1>
         <ul class="create__path path"> 
@@ -74,21 +72,21 @@
             <div class="path__head"> 
               <p class="path__name">Тип иска:</p><a class="path__link hover-opacity" href="index.html">Изменить</a>
             </div>
-            <p class="path__text"> Заявление в суд о выскании алиментов на ребенка</p>
+            <p class="path__text"> Заявление в суд о&nbsp;расторжении брака</p>
           </li>
-          <li class="path__item">
+          <li class="path__item path__item--current">
             <div class="path__head"> 
               <p class="path__name">Тип иска:</p><a class="path__link">Изменить</a>
             </div>
             <p class="path__text"> Мы готовим и помогаем вам подать заявление в суд 5&nbsp;000₽ </p>
           </li>
-          <li class="path__item path__item">
+          <li class="path__item"> 
             <div class="path__head"> 
               <p class="path__name">Данные заявления</p><a class="path__link">Изменить</a>
             </div>
             <p class="path__text"> Внимательно заполните все необходимые поля для формирования заявления </p>
           </li>
-          <li class="path__item path__item--end path__item--current">
+          <li class="path__item path__item--end"> 
             <figure class="path__img-wrap"> 
               <picture>
                 <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="71" loading="lazy"/>
@@ -99,59 +97,91 @@
         </ul>
       </div>
     </section>
-    <section class="simple"> 
-      <div class="simple__inner container"> 
-        <div class="simple__col simple__col--left">
-          <div class="simple__head">
-            <figure class="simple__img-wrap">
-              <picture>
-                <source srcset="/img/webp/hands.webp" type="image/webp"/><img class="card__img" src="/img/hands.png" alt="" width="102" loading="lazy"/>
-              </picture>
-            </figure>
-            <h3 class="simple__title size-3">Заявление в суд<br> о&nbsp;выскании алиментов<br> на ребенка</h3>
-          </div>
-          <div class="simple__item simple-plan">
-            <h3 class="simple-plan__title"><mark>Вы</mark> готовите и подаете заявление в суд самостоятельно</h3>
-            <ul class="simple-plan__list"> 
-              <li class="simple-plan__item"> 
-                <figure class="simple-plan__img-wrap"> 
+    <section class="choose"> 
+      <div class="choose__inner container">
+        <h1 class="choose__title size-3">Выберите тарифный план</h1>
+        <ul class="choose__list plan">
+          <li class="choose__item">
+            <h3 class="plan__title"><mark>Мы</mark> готовим и помогаем вам подать заявление в суд </h3>
+            <ul class="plan__list"> 
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
                   <picture>
-                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="simple-plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
+                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
                   </picture>
                 </figure>
-                <p class="simple-plan__text">Шаблон заявления (2021 г. редакции)</p>
+                <p class="plan__text">Готовое к подаче в суд заявление</p>
+              </li>
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Пошаговый план действий</p>
+              </li>
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/proc.webp" type="image/webp"/><img class="plan__img" src="/img/proc.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Сопровождение всего процесса юристом</p>
+              </li>
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/lich.webp" type="image/webp"/><img class="plan__img" src="/img/lich.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Личная консультация профильного юриста</p>
               </li>
             </ul>
-            <div class="simple-plan__price"> 
-              <p class="simple-plan__sum size-1">0 ₽</p>
+            <div class="plan__price"> 
+              <p class="plan__sum size-1">5 000 ₽</p><a class="plan__link" href="razvod-step-3.html">Выбрать тариф</a>
             </div>
-          </div>
-        </div>
-        <div class="simple__col simple__col--right">
-          <form class="simple-form" name="alimony-simple" metod="get" acton="#">
-            <fieldset class="simple-form__fieldset"> 
-              <legend class="simple-form__legend size-1">Получите шаблон заявления оставив ваш e-mail</legend>
-              <div class="simple-form__box">
-                <label class="simple-form__label"> <span>Введите email</span>
-                  <input class="simple-form__input" type="email" name="my-alimony-email" placeholder="Введите email">
-                </label>
-              </div>
-            </fieldset>
-            <button class="simple-form__btn" type="submit">Получить шаблон</button>
-            <p class="simple-form__text">Нажимая на кнопку вы соглашаетесь с <a class="simple-form__ofert" href=""> договором-офертой</a></p>
-          </form>
-          <div class="simple__download download hidden">
-            <h3 class="download__title size-1">Шаблон доступен для скачивания</h3>
-            <div class="download__box"> 
-              <figure class="download__img-wrap">
-                <picture>
-                  <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="download__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
-                </picture>
-              </figure>
-              <p class="download__text">Шаблон заявления (2021 г. редакции)</p>
-            </div><a class="download__link" href="#" download>Скачать шаблон</a>
-          </div>
-        </div>
+          </li>
+          <li class="choose__item">
+            <h3 class="plan__title"><mark>Мы</mark> готовим и <mark>Вы</mark> подаете заявление в суд</h3>
+            <ul class="plan__list"> 
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Готовое к подаче в суд заявление</p>
+              </li>
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Пошаговый план действий</p>
+              </li>
+            </ul>
+            <div class="plan__price"> 
+              <p class="plan__sum size-1">999 ₽</p><a class="plan__link" href="razvod-step-3.html">Выбрать тариф</a>
+            </div>
+          </li>
+          <li class="choose__item">
+            <h3 class="plan__title"><mark>Вы</mark> готовите и подаете заявление в суд самостоятельно</h3>
+            <ul class="plan__list"> 
+              <li class="plan__item"> 
+                <figure class="plan__img-wrap"> 
+                  <picture>
+                    <source srcset="/img/webp/isk.webp" type="image/webp"/><img class="plan__img" src="/img/isk.png" alt="" width="40" loading="lazy"/>
+                  </picture>
+                </figure>
+                <p class="plan__text">Шаблон заявления (2021 г. редакции)</p>
+              </li>
+            </ul>
+            <div class="plan__price"> 
+              <p class="plan__sum size-1">0 ₽</p><a class="plan__link" href="razvod-step-5.html">Выбрать тариф</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
