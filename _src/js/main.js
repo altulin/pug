@@ -3,6 +3,7 @@ import { getElementData, getElementName } from './modules/newElements.js';
 
 $(function () {
 
+
   // faq tabs
   $('#tabs').responsiveTabs({
     startCollapsed: 'accordion'

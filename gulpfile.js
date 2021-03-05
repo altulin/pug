@@ -48,7 +48,8 @@ const path = {
     fonts: `${sourceFolder}/fonts/**/*`, //
     pug: `${sourceFolder}/pug/pages/*.pug`,//
     libs_js: `${sourceFolder}/js/libs/**/*.js`,//
-    libs_css: `${sourceFolder}/css/libs/**/*`//
+    libs_css: `${sourceFolder}/css/libs/**/*`,//
+    ico: `${sourceFolder}/*.ico`
   },
   watch: {
     // html: `${sourceFolder}/**/*.html`,
@@ -214,7 +215,8 @@ function buildcopy() {
     path.src.min_js,
     path.src.js,
     path.src.img,
-    path.src.html
+    path.src.html,
+    path.src.ico
   ], { base: `${sourceFolder}` }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой
 };
@@ -269,4 +271,5 @@ exports.createWebp = createWebp;
 
 
 exports.default = parallel(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, browsersync, startwatch);
-exports.build = series(clean, styles, scripts, images, buildcopy);
+// exports.build = series(clean, styles, scripts, images, buildcopy);
+exports.build = series(cleanImg, styles, scripts, images, imagesSvg, createSprite, createWebp, transformPug, buildcopy);

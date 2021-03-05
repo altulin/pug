@@ -1,10 +1,10 @@
 //- svg sprite
 mixin svg(id, className)
   svg(class=`${className}`)
-    use(xlink:href=`../img/sprite.svg#${id}`)
+    use(xlink:href=`img/sprite.svg#${id}`)
 
 //- img webp
 mixin img(name, type, alt, className, width)
   picture
-    source(srcset=`/img/webp/${name}.webp` type=`image/webp`)
-    img(class=`${className}` src=`/img/${name}.${type}` alt=alt width=width loading="lazy")
+    source(srcset=`img/webp/${name}.webp` type=`image/webp`)
+    img(class=`${className}` src=`img/${name}.${type}` alt=alt width=width loading="lazy")

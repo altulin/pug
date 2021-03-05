@@ -19,7 +19,7 @@ block content
         li.breadcrumbs__item 
           a.breadcrumbs__link.hover-opacity(href="index.html") Тип иска
         li.breadcrumbs__item 
-          a.breadcrumbs__link.hover-opacity(href="alimenty-step-2.html") Тарифный план 
+          a.breadcrumbs__link.hover-opacity(href="razvod-step-2.html") Тарифный план 
         li.breadcrumbs__item 
           a.breadcrumbs__link.breadcrumbs__link--current Данные заявления 
       
@@ -31,13 +31,13 @@ block content
           .path__head 
             p.path__name Тип иска:
             a.path__link.hover-opacity(href="index.html") Изменить
-          p.path__text  Заявление в суд о выскании алиментов на ребенка
+          p.path__text  Заявление в суд о&nbsp;расторжении брака
         
         li.path__item
           .path__head 
             p.path__name Тарифный план:
-            a.path__link.hover-opacity(href="alimenty-step-2.html") Изменить
-          p.path__text  Мы готовим и помогаем вам подать заявление в суд 5&nbsp;000&nbsp;₽ 
+            a.path__link.hover-opacity(href="razvod-step-2.html") Изменить
+          p.path__text  Мы готовим и Вы подаете заявление в суд 999&nbsp;₽ 
 
         li.path__item.path__item--current
           .path__head 
@@ -56,7 +56,7 @@ block content
       h2.fill__title.size-3 Введите данные заявления
 
       .fill__content
-        form.fill__form.fill-form--alimony(name="alimony" metod="post" acton="#" autocomplete="off")
+        form.fill__form.fill-form--marriage(name="marriage" metod="post" acton="#" autocomplete="off")
           .fill-form__slider.slider
             .slider__item.slider__item--visually
 
@@ -175,6 +175,7 @@ block content
                     .fill-form__select-wrap
                       select#defendant-year.fill-form__select(name="defendant-year")
                         option(value="" selected) Год
+                        - start_year = 2003
                         while start_year < end_year
                           -const num = start_year++
                           option(value=`${num}`)= num
@@ -278,12 +279,12 @@ block content
 
                 .fill-form__box.box 
                   .box__inner--third
-                    label.fill-form__label(for="1-childrens-day") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-day") 
                       span День
                     .fill-form__select-wrap
                       
                       select#1-childrens-day.fill-form__select(name="1-childrens-day") 
-                        option(value="" selected) День
+                        option(value="" selected) День 
                         - n = 1
                         while n < 32
                           -const num = n++
@@ -305,12 +306,10 @@ block content
                     .fill-form__select-wrap
                       select#1-childrens-year.fill-form__select(name="1-childrens-year")
                         option(value="" selected) Год
-                        - start_year = 2003;
+                        - start_year = 2003
                         while start_year < end_year
                           -const num = start_year++
                           option(value=`${num}`)= num
-
-                        
 
 
               button.fill-form__btn.fill-form__btn--submit(type="submit") Далее

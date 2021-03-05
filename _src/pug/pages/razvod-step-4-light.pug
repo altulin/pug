@@ -1,0 +1,234 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+block content
+
+  section.create 
+    .create__inner.container 
+
+      ul.create__breadcrumbs.breadcrumbs
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="index.html") Главная
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="index.html") Тип иска
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="razvod-step-2.html") Тарифный план 
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.hover-opacity(href="razvod-step-3-light.html") Данные заявления 
+        li.breadcrumbs__item 
+          a.breadcrumbs__link.breadcrumbs__link--current Получить заявление 
+      
+      h1.create__title.title.size-4 Создание заявления
+
+      ul.create__path.path 
+
+        li.path__item 
+          .path__head 
+            p.path__name Тип иска:
+            a.path__link.hover-opacity(href="index.html") Изменить
+          p.path__text  Заявление в суд о&nbsp;расторжении брака
+        
+        li.path__item
+          .path__head 
+            p.path__name Тарифный план:
+            a.path__link.hover-opacity(href="razvod-step-2.html") Изменить
+          p.path__text  Мы готовим и Вы подаете заявление в суд 999&nbsp;₽ 
+
+        li.path__item 
+          .path__head 
+            p.path__name Данные заявления
+            a.path__link.hover-opacity(href="razvod-step-3-light.html") Изменить
+          p.path__text  Внимательно заполните все необходимые поля для формирования заявления 
+
+        li.path__item.path__item--end.path__item--current
+          figure.path__img-wrap 
+            +img(`hands`, `png`, ``, `card__img`, `71`)
+          p.path__text  Получите завяление согласно выбранному тарифному плану
+  
+
+  section.processing
+    .processing__inner.container 
+      .processing__col.processing__col--left
+        .processing__data.data 
+          .data__head.data-head
+            figure.data-head__img-wrap
+              +img(`hands`, `png`, `расторжение брака`, `data-head__img`, `102`)
+            h3.data-head__title.size-1 Заявление в суд о выскании алиментов на ребенка
+
+          ul.data__list 
+            li.data__item Ваша фамилия, имя, отчество
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Фамилия:
+                  span.data__val.data-my-surname Александровский
+                li.data__sub-item 
+                  span.data__term Имя:
+                  span.data__val.data-my-name Александр
+                li.data__sub-item 
+                  span.data__term Отчество:
+                  span.data__val.data-my-second-name Александрович
+            
+            li.data__item Ваш Адрес регистрации по месту жительства
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Город:
+                  span.data__val.data-my-city Иркутск
+                li.data__sub-item 
+                  span.data__term Название улицы:
+                  span.data__val.data-my-street Ленина
+                li.data__sub-item 
+                  span.data__term № дома:
+                  span.data__val.data-my-number-home 12
+                li.data__sub-item 
+                  span.data__term № квартиры:
+                  span.data__val.data-my-number-flat 5
+                li.data__sub-item 
+                  span.data__term Почтойвый индекс:
+                  span.data__val.data-my-post 664000
+            
+            li.data__item.data-hidden Фамилия, имя, отчество ответчика
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Фамилия:
+                  span.data__val.data-defendant-surname Иванов
+                li.data__sub-item 
+                  span.data__term Имя:
+                  span.data__val.data-defendant-name Иван
+                li.data__sub-item 
+                  span.data__term Отчество:
+                  span.data__val.data-defendant-second-name Александрович
+            
+            li.data__item.data-hidden Дата рождения ответчика
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term День:
+                  span.data__val.data-defendant-day 07
+                li.data__sub-item 
+                  span.data__term Месяц:
+                  span.data__val.data-defendant-month 11
+                li.data__sub-item 
+                  span.data__term Год:
+                  span.data__val.data-defendant-year 1917
+            
+            li.data__item.data-hidden Адрес фактического или последнего места жительства ответчика
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Город:
+                  span.data__val.data-defendant-city Иркутск
+                li.data__sub-item 
+                  span.data__term Название улицы:
+                  span.data__val.data-defendant-street Ленина
+                li.data__sub-item 
+                  span.data__term № дома:
+                  span.data__val.data-defendant-number-home 12
+                li.data__sub-item 
+                  span.data__term № квартиры:
+                  span.data__val.data-defendant-number-flat 5
+                li.data__sub-item 
+                  span.data__term Почтойвый индекс:
+                  span.data__val.data-defendant-post 664000
+
+            li.data__item.data-hidden Наличие общих несовершеннолетних детей
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Наличие:
+                  span.data__val.data-childrens 1 
+            
+            li.data__item.data-hidden Данные несовершеннолетнего ребенка
+              ul.data__sub-list
+                li.data__sub-item 
+                  span.data__term Фамилия:
+                  span.data__val.data-1-children-surname Петров
+                li.data__sub-item 
+                  span.data__term Имя:
+                  span.data__val.data-1-children-name Иван
+                li.data__sub-item 
+                  span.data__term Отчество:
+                  span.data__val.data-1-children-second-name Иванович
+                li.data__sub-item 
+                  span.data__term Дата рождения:
+                  span.data__val.data-childrens 16.01.2000 
+
+          a.data__link.data__link--back.data-hidden(href="/razvod-step-3.html") 
+            span  Редактировать данные
+          a.data__link.data__link--open(href="#") 
+            span Проверить все данные
+
+        .processing__plan.plan.hidden
+          h3.plan__title <mark>Мы</mark> готовим и помогаем вам подать заявление в суд
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Готовое к подаче в суд заявление
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Пошаговый план действий
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`proc`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Сопровождение всего процесса юристом
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`lich`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Личная консультация профильного юриста
+          .plan__price 
+            p.plan__sum.size-1 5 000 ₽
+
+
+        .processing__plan.plan 
+          h3.plan__title <mark>Мы</mark> готовим и помогаем вам подать заявление в суд
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Готовое к подаче в суд заявление
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Пошаговый план действий
+          .plan__price 
+            p.plan__sum.size-1 999 ₽
+        
+        .processing__plan.plan.hidden
+          h3.plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Шаблон заявления (2021 г. редакции)
+          .plan__price 
+            p.plan__sum.size-1 0 ₽
+
+      .processing__col.processing__col--right
+        .processing__content.processing-content  
+          p.processing-content__title.size-1 Ваши данные обработаны
+          p.processing-content__text Наши юристы начнут заниматься подготовкой заявления сразу после оплаты. 
+          p.processing-content__text  Позвоним и согласуем удобное для вас время консультации.
+          p.processing-content__text Пришлем заявление и пошаговый план действий на ваш email в течении 24 часов.
+
+        form.processing__form.processing-form.processing__form--marriage(name="marriage-processing" metod="post" acton="#" autocomplete="off")
+          fieldset.processing-form__field 
+            legend.processing-form__legend.size-1 Контактная информация
+            .processing-form__box.box
+              .box__inner.box__inner--tiny
+                label.processing-form__label 
+                  span телефонный код
+                  input(type="text" name="my-phone-code" placeholder="+7").processing-form__input.input-code
+
+              .box__inner.box__inner--wide
+                label.processing-form__label 
+                  span телефон мой
+                  input(type="text" name="my-phone" placeholder="(___) ___-__-__").processing-form__input.input-phone
+                
+            .processing-form__box
+              label.processing-form__label 
+                span Введите email
+                input(type="email" name="my-email" placeholder="Введите email").processing-form__input
+                
+          button.processing-form__btn.processing-form__btn--submit(type="submit") Оплатить
+
+          p.processing-form__text Нажимая на кнопку вы соглашаетесь с 
+            a.processing-form__ofert(href="")  договором-офертой
+
