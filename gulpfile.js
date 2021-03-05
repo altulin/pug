@@ -49,7 +49,8 @@ const path = {
     pug: `${sourceFolder}/pug/pages/*.pug`,//
     libs_js: `${sourceFolder}/js/libs/**/*.js`,//
     libs_css: `${sourceFolder}/css/libs/**/*`,//
-    ico: `${sourceFolder}/*.ico`
+    ico: `${sourceFolder}/*.ico`,
+    files: `${sourceFolder}/files/**/*`
   },
   watch: {
     // html: `${sourceFolder}/**/*.html`,
@@ -216,7 +217,8 @@ function buildcopy() {
     path.src.js,
     path.src.img,
     path.src.html,
-    path.src.ico
+    path.src.ico,
+    path.src.files
   ], { base: `${sourceFolder}` }) // Параметр "base" сохраняет структуру проекта при копировании
     .pipe(dest(`${projectFolder}/`)) // Выгружаем в папку с финальной сборкой
 };

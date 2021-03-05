@@ -190,9 +190,6 @@
     & div + div
       margin-top: 20px
 
-  &__inner
-    // flex-grow: 1
-
   &__inner--tiny
     max-width: 120px
     flex-grow: 1
@@ -302,6 +299,7 @@
       &::after
         background: #D3B29B
         color: $white
+        border-color: transparent
 
   &__btn-my
 
@@ -319,11 +317,6 @@
 
     &::after
       content: "3"
-
-  &__btn::after
-
-    +mw(768)
-      // content: none
 
 .jq-selectbox__trigger
   display: none
@@ -382,8 +375,6 @@
 .jq-selectbox__dropdown
   width: 100% !important
   top: 100% !important
-  // max-height: 200px !important
-  // overflow-y: scroll
 
 .jq-selectbox ul
   max-height: 200px

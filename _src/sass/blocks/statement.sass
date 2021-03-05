@@ -42,8 +42,10 @@
     padding-bottom: 28px
 
     +mw(768)
-      padding-left: 0
+      padding-left: 20px
       padding-right: 20px
+      padding-top: 20px
+      padding-bottom: 20px
 
   &__img-wrap
     width: 80px
@@ -53,10 +55,11 @@
     // align-self: flex-end
 
     +mw(768)
-      width: 80px
+      width: 50px
+      height: 50px
       flex-shrink: 0
       margin-right: 15px
-      display: none
+      flex-shrink0
 
   &__img
     display: block
@@ -66,8 +69,10 @@
     font-weight: 400
 
     +mw(768)
-      padding-bottom: 20px
-      padding-left: 20px
+      padding-bottom: 0px
+      padding-left: 0px
+      font-size: 20px
+      line-height: 1.2
 
       & br
         display: none
@@ -100,6 +105,8 @@
     +mw(768)
       margin-left: 20px
       margin-right: 20px
+      font-size: rem(18)
+      line-height: rem(24)
 
     &:hover
       background-color: #D0AE96
@@ -149,11 +156,12 @@
       font-weight: 600
 
   &__title
-    font-size: rem(34)
-    line-height: rem(44)
     font-family: PTSerif,Arial,sans-serif
     font-weight: 400
     margin-bottom: 24px
+
+    & br
+      display: none
 
   &__col
 
