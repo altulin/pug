@@ -115,9 +115,47 @@
 .experience
   display: flex
   justify-content: space-around
+  position: relative
 
   +mw(768)
     flex-direction: column-reverse
+
+  &__name
+    width: 155px
+    position: absolute
+    left: 0
+    bottom: 60px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    +mw(768)
+      width: 195px
+      bottom: 30px
+
+  &__name-title
+    font-size: rem(16)
+    line-height: rem(22)
+    font-weight: 500
+    background-color: #fff
+    padding-left: 5px
+    padding-right: 5px
+
+    +mw(600)
+      font-size: rem(18)
+
+  &__name-text
+    font-weight: 500
+    font-size: rem(14)
+    line-height: rem(20)
+    color: #C4997A
+    background-color: #fff
+    padding-left: 5px
+    padding-right: 5px
+
+    +mw(600)
+      font-size: rem(16)
+      line-height: rem(20)
 
   &__img-wrap
     width: 265px
@@ -128,6 +166,12 @@
 
   &__img
     display: block
+
+  &__col
+    max-width: 593px
+
+    +mw(768)
+      max-width: none
 
   &__list
     display: flex

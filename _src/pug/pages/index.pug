@@ -7,7 +7,7 @@ block content
     .promo__inner.container
       .promo__left
         h1.promo__title.title.title--bold.size-4 Поможем подготовить<br> и&nbsp;подать заявление в&nbsp;суд<br> без личной встречи с&nbsp;юристом
-        p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие<br>сроки подготовят вам заявление, которое будет<br>твечать всем требованиям действующего<br>законодательства, а вы получите его не выходя из дома
+        p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие <br>сроки подготовят вам заявление, которое будет<br> твечать всем требованиям действующего <br>законодательства, а вы получите его не выходя из дома
 
         a.promo__link(href="#marriage")
           +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
@@ -41,8 +41,14 @@ block content
           a.card__link(href="razvod-step-2.html") Получить заявление
 
       .statement__experience.experience
-        figure.experience__img-wrap
+        .experience__name 
+          h4.experience__name-title Алесей Гордилежа
+          p.experience__name-text семейный юрист
+        figure.experience__img-wrap.tablet-hidden
           +img(`man`, `png`, ``, `experience__img`, `366`)
+        
+        figure.experience__img-wrap.tablet-visibility 
+          +img(`man-mob`, `png`, ``, `experience__img`, `366`)
         .experience__col
           h3.experience__title.size-4 Все заявления прорабатываются<br> юристом с 10 летним опытом<br> в семейных спорах
           ul.experience__list.size-1
@@ -88,8 +94,8 @@ block content
           .faq__social.social
             a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
               +svg(`tg`, `social__tg`)
-            a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
-              +svg(`viber`, `social__viber`)
+            //- a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
+            //-   +svg(`viber`, `social__viber`)
             a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
               +svg(`wa`, `social__wa`)
 

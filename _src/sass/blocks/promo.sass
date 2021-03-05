@@ -28,6 +28,13 @@
   &__text
     margin-bottom: 40px
 
+    +mw(600)
+      font-size: rem(18)
+      line-height: rem(24)
+
+      & br
+        display: none
+
   &__link
     display: flex
     align-items: center
@@ -39,6 +46,12 @@
     border-radius: 10px
     border: 1px solid #F3E0CF
     background-color: rgba($white, 0.5)
+
+    +mw(600)
+      width: 100%
+
+      & br
+        display: none
 
     & + a
       margin-top: 15px
