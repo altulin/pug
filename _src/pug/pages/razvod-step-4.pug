@@ -154,7 +154,7 @@ block content
           a.data__link.data__link--open(href="#") 
             span Проверить все данные
 
-        .processing__plan.plan 
+        .processing__plan.plan
           h3.plan__title <mark>Мы</mark> готовим и помогаем вам подать заявление в суд
           ul.plan__list 
             li.plan__item 
@@ -173,9 +173,33 @@ block content
               figure.plan__img-wrap 
                 +img(`lich`, `png`, ``, `plan__img`, `40`)
               p.plan__text Личная консультация профильного юриста
-
           .plan__price 
             p.plan__sum.size-1 5 000 ₽
+
+
+        .processing__plan.plan.hidden 
+          h3.plan__title <mark>Мы</mark> готовим и помогаем вам подать заявление в суд
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Готовое к подаче в суд заявление
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Пошаговый план действий
+          .plan__price 
+            p.plan__sum.size-1 999 ₽
+        
+        .processing__plan.plan.hidden
+          h3.plan__title <mark>Вы</mark> готовите и подаете заявление в суд самостоятельно
+          ul.plan__list 
+            li.plan__item 
+              figure.plan__img-wrap 
+                +img(`isk`, `png`, ``, `plan__img`, `40`)
+              p.plan__text Шаблон заявления (2021 г. редакции)
+          .plan__price 
+            p.plan__sum.size-1 0 ₽
 
       .processing__col.processing__col--right
         .processing__content.processing-content  

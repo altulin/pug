@@ -76,7 +76,8 @@ $(function () {
 
     $('select').styler('destroy');
     setTimeout(function () {
-      $(`select`).styler();
+      // $(`select`).styler();
+      getStyler();
       delErrorForm();
     }, 1)
 
@@ -84,7 +85,15 @@ $(function () {
 
 
 
-  $(`select`).styler();
+
+
+  const getStyler = () => {
+    if ($(window).width() > 600) {
+      $(`select`).styler();
+    }
+  };
+
+  getStyler();
 
 
   // проверка заполнения валидация
@@ -153,6 +162,7 @@ $(function () {
     $(`input, .jq-selectbox__select`).on(`click`, (e) => {
       $(e.target).removeClass(`fill-form__input--not-valid`);
       $(e.target).parent().parent().removeClass(`fill-form__input--not-valid`);
+      $(e.target).parent().removeClass(`fill-form__input--not-valid`);
     })
   };
 

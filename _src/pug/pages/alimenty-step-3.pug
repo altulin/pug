@@ -89,7 +89,7 @@ block content
                 
                 .fill-form__box.box
                   .box__inner.box__inner--tiny
-                    label.fill-form__label(for="my-type-street") 
+                    label.fill-form__label.fill-form__label--select(for="my-type-street") 
                       span Выберите улицу
                     .fill-form__select-wrap 
                       select#my-type-street.fill-form__select(name="my-type-street")  
@@ -149,32 +149,32 @@ block content
 
                 .fill-form__box.box 
                   .box__inner--third
-                    label.fill-form__label(for="defendant-day") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-day") 
                       span День
                     .fill-form__select-wrap
                       
                       select#defendant-day.fill-form__select(name="defendant-day") 
-                        option(value="День" selected disabled) День 
+                        option(value="" selected) День 
                         while n < 32
                           -const num = n++
                           option(value=`${num}`)= num
 
 
                   .box__inner--third
-                    label.fill-form__label(for="defendant-month") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-month") 
                       span Месяц
                     .fill-form__select-wrap
                       select#defendant-month.fill-form__select(name="defendant-month") 
-                        option(value="День" selected disabled) Месяц
+                        option(value="" selected) Месяц
                         each val, index in months
                           option(value=`${index+ 1}`)= val
 
                   .box__inner--third
-                    label.fill-form__label(for="defendant-year") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-year") 
                       span Год
                     .fill-form__select-wrap
                       select#defendant-year.fill-form__select(name="defendant-year")
-                        option(value="Год" selected disabled) Год
+                        option(value="" selected) Год
                         while start_year < end_year
                           -const num = start_year++
                           option(value=`${num}`)= num
@@ -191,7 +191,7 @@ block content
                 
                 .fill-form__box.box
                   .box__inner.box__inner--tiny
-                    label.fill-form__label(for="defendant-type-street") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-type-street") 
                       span Выберите улицу
                     .fill-form__select-wrap 
                       select#defendant-type-street.fill-form__select(name="defendant-type-street")  
@@ -247,7 +247,7 @@ block content
                 legend.fill-form__title.size-1 Наличие общих несовершеннолетних детей
 
                 .fill-form__box
-                  label.fill-form__label(for="childrens") 
+                  label.fill-form__label.fill-form__label--select(for="childrens") 
                     span Количество детей
                   .fill-form__select-wrap 
                     select#childrens.fill-form__select(name="childrens")  
@@ -283,30 +283,34 @@ block content
                     .fill-form__select-wrap
                       
                       select#1-childrens-day.fill-form__select(name="1-childrens-day") 
-                        option(value="День" selected disabled) День 
+                        option(value="" selected) День
+                        - n = 1
                         while n < 32
                           -const num = n++
                           option(value=`${num}`)= num
 
 
                   .box__inner--third
-                    label.fill-form__label(for="1-childrens-month") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-month") 
                       span Месяц
                     .fill-form__select-wrap
                       select#1-childrens-month.fill-form__select(name="1-childrens-month") 
-                        option(value="День" selected disabled) Месяц
+                        option(value="" selected) Месяц
                         each val, index in months
                           option(value=`${index+ 1}`)= val
 
                   .box__inner--third
-                    label.fill-form__label(for="1-childrens-year") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-year") 
                       span Год
                     .fill-form__select-wrap
                       select#1-childrens-year.fill-form__select(name="1-childrens-year")
-                        option(value="Год" selected disabled) Год
+                        option(value="" selected) Год
+                        - start_year = 2003;
                         while start_year < end_year
                           -const num = start_year++
                           option(value=`${num}`)= num
+
+                        
 
 
               button.fill-form__btn.fill-form__btn--submit(type="submit") Далее

@@ -24,10 +24,10 @@ export const getElementName = (index) => {
 <legend class="fill-form__title size-1">Дата рождения</legend>
 <div class="fill-form__box box"> 
   <div class="box__inner--third">
-    <label class="fill-form__label" for="${index}-childrens-day"> <span>День</span></label>
+    <label class="fill-form__label fill-form__label--select" for="${index}-childrens-day"> <span>День</span></label>
     <div class="fill-form__select-wrap">
       <select class="fill-form__select" id="${index}-childrens-day" name="${index}-childrens-day"> 
-        <option value="День" selected="" disabled="">День </option>
+        <option value="" selected="">День </option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -63,10 +63,10 @@ export const getElementName = (index) => {
     </div>
   </div>
   <div class="box__inner--third">
-    <label class="fill-form__label" for="${index}-childrens-month"> <span>Месяц</span></label>
+    <label class="fill-form__label fill-form__label--select" for="${index}-childrens-month"> <span>Месяц</span></label>
     <div class="fill-form__select-wrap">
       <select class="fill-form__select" id="${index}-childrens-month" name="${index}-childrens-month"> 
-        <option value="День" selected="" disabled="">Месяц</option>
+        <option value="" selected="">Месяц</option>
         <option value="1">январь</option>
         <option value="2">февраль</option>
         <option value="3">март</option>
@@ -83,10 +83,10 @@ export const getElementName = (index) => {
     </div>
   </div>
   <div class="box__inner--third">
-    <label class="fill-form__label" for="${index}-childrens-year"> <span>Год</span></label>
+    <label class="fill-form__label fill-form__label--select" for="${index}-childrens-year"> <span>Год</span></label>
     <div class="fill-form__select-wrap">
       <select class="fill-form__select" id="${index}-childrens-year" name="${index}-childrens-year">
-        <option value="Год" selected="" disabled="">Год</option>
+        <option value="" selected="">Год</option>
         <option value="2003">2003</option>
         <option value="2004">2004</option>
         <option value="2005">2005</option>
