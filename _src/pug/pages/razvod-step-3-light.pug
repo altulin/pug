@@ -10,46 +10,46 @@ block content
   -let start_year = 2003;
   -const end_year = 2022;
 
-  section.create 
-    .create__inner.container 
+  section.create
+    .create__inner.container
 
       ul.create__breadcrumbs.breadcrumbs
-        li.breadcrumbs__item 
+        li.breadcrumbs__item
           a.breadcrumbs__link.hover-opacity(href="index.html") Главная
-        li.breadcrumbs__item 
+        li.breadcrumbs__item
           a.breadcrumbs__link.hover-opacity(href="index.html") Тип иска
-        li.breadcrumbs__item 
-          a.breadcrumbs__link.hover-opacity(href="razvod-step-2.html") Тарифный план 
-        li.breadcrumbs__item 
-          a.breadcrumbs__link.breadcrumbs__link--current Данные заявления 
-      
+        li.breadcrumbs__item
+          a.breadcrumbs__link.hover-opacity(href="razvod-step-2.html") Тарифный план
+        li.breadcrumbs__item
+          a.breadcrumbs__link.breadcrumbs__link--current Данные заявления
+
       h1.create__title.title.size-4 Создание заявления
 
-      ul.create__path.path 
+      ul.create__path.path
 
-        li.path__item 
-          .path__head 
+        li.path__item
+          .path__head
             p.path__name Тип иска:
             a.path__link.hover-opacity(href="index.html") Изменить
           p.path__text  Заявление в суд о&nbsp;расторжении брака
-        
+
         li.path__item
-          .path__head 
+          .path__head
             p.path__name Тарифный план:
             a.path__link.hover-opacity(href="razvod-step-2.html") Изменить
-          p.path__text  Мы готовим и Вы подаете заявление в суд 999&nbsp;₽ 
+          p.path__text  Мы готовим и Вы подаете заявление в суд 999&nbsp;₽
 
         li.path__item.path__item--current
-          .path__head 
+          .path__head
             p.path__name Данные заявления
-            a.path__link Изменить
-          p.path__text  Внимательно заполните все необходимые поля для формирования заявления 
+            a.path__link
+          p.path__text  Внимательно заполните все необходимые поля для формирования заявления
 
-        li.path__item.path__item--end 
-          figure.path__img-wrap 
+        li.path__item.path__item--end
+          figure.path__img-wrap
             +img(`hands`, `png`, ``, `card__img`, `71`)
           p.path__text  Получите завяление согласно выбранному тарифному плану
-  
+
   section.fill
 
     .fill__inner.container
@@ -64,35 +64,35 @@ block content
                 legend.fill-form__title.size-1 Ваша фамилия, имя, отчество
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Ваша Фамилия
                     input(type="text" name="my-surname" placeholder="Ваша Фамилия").fill-form__input.input-text
-                
+
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Ваше Имя
                     input(type="text" name="my-name" placeholder="Ваше Имя").fill-form__input.input-text
-                
+
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Ваше Отчество
                     input(type="text" name="my-second-name" placeholder="Ваше Отчество").fill-form__input.input-text
 
-              fieldset.fill-form__field 
+              fieldset.fill-form__field
                 legend.fill-form__title.size-1 Адрес регистрации по месту жительства
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Город
                     input(type="text" name="my-city" placeholder="Город").fill-form__input.input-text
 
-                
+
                 .fill-form__box.box
                   .box__inner.box__inner--tiny
-                    label.fill-form__label.fill-form__label--select(for="my-type-street") 
+                    label.fill-form__label.fill-form__label--select(for="my-type-street")
                       span Выберите улицу
-                    .fill-form__select-wrap 
-                      select#my-type-street.fill-form__select(name="my-type-street")  
+                    .fill-form__select-wrap
+                      select#my-type-street.fill-form__select(name="my-type-street")
                         option.fill-form__option(value="street") Улица
                         option.fill-form__option(value="boulevard") Бульвар
                         option.fill-form__option(value="travel") Проезд
@@ -100,77 +100,77 @@ block content
                         option.fill-form__option(value="avenue") Проспект
 
                   .box__inner.box__inner--wide
-                    label.fill-form__label 
+                    label.fill-form__label
                       span Название улицы
                       input(type="text" name="my-street" placeholder="Название улицы").fill-form__input.input-text
 
-                .fill-form__box.box 
-                  .box__inner.box__inner--half 
-                    label.fill-form__label 
+                .fill-form__box.box
+                  .box__inner.box__inner--half
+                    label.fill-form__label
                       span № дома
                       input(type="text" name="my-number-home" placeholder="№ дома").fill-form__input.input-num
 
-                  .box__inner.box__inner--half 
-                    label.fill-form__label 
+                  .box__inner.box__inner--half
+                    label.fill-form__label
                       span № кв.
-                      input(type="text" name="my-number-flat" placeholder="№ кв.").fill-form__input.input-num
+                      input(type="text" name="my-number-flat" placeholder="№ кв.").fill-form__input.input-num.not-req
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Почтовый индекс
                     input(type="text" name="my-post" placeholder="Почтовый индекс").fill-form__input.input-num
-              
+
               button.fill-form__btn.fill-form__btn--next(type="button") Далее
 
-              p.fill-form__text Нажимая на кнопку вы соглашаетесь с 
-                a.fill-form__ofert(href="files/contract.pdf" target="_blank")  договором-офертой
+              p.fill-form__text Нажимая на кнопку вы соглашаетесь с
+                a.fill-form__ofert(href="politics.html" target="_blank")  договором-офертой
 
             .slider__item
               fieldset.fill-form__field
                 legend.fill-form__title.size-1 Фамилия, имя, отчество ответчика
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Фамилия ответчика
                     input(type="text" name="defendant-surname" placeholder="Фамилия ответчика ").fill-form__input.input-text
-                
+
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Имя ответчика
                     input(type="text" name="defendant-name" placeholder="Имя ответчика").fill-form__input.input-text
-                
+
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Отчество ответчика
                     input(type="text" name="defendant-second-name" placeholder="Отчество ответчика").fill-form__input.input-text
 
               fieldset.fill-form__field
                 legend.fill-form__title.size-1 Дата рождения ответчика
 
-                .fill-form__box.box 
+                .fill-form__box.box
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="defendant-day") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-day")
                       span День
                     .fill-form__select-wrap
-                      
-                      select#defendant-day.fill-form__select(name="defendant-day") 
-                        option(value="" selected) День 
+
+                      select#defendant-day.fill-form__select(name="defendant-day")
+                        option(value="" selected) День
                         while n < 32
                           -const num = n++
                           option(value=`${num}`)= num
 
 
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="defendant-month") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-month")
                       span Месяц
                     .fill-form__select-wrap
-                      select#defendant-month.fill-form__select(name="defendant-month") 
+                      select#defendant-month.fill-form__select(name="defendant-month")
                         option(value="" selected) Месяц
                         each val, index in months
                           option(value=`${index+ 1}`)= val
 
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="defendant-year") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-year")
                       span Год
                     .fill-form__select-wrap
                       select#defendant-year.fill-form__select(name="defendant-year")
@@ -181,21 +181,21 @@ block content
                           option(value=`${num}`)= num
 
 
-              fieldset.fill-form__field 
+              fieldset.fill-form__field
                 legend.fill-form__title.size-1 Адрес фактического или последнего места жительства
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Город
                     input(type="text" name="defendant-city" placeholder="Город").fill-form__input.input-text
 
-                
+
                 .fill-form__box.box
                   .box__inner.box__inner--tiny
-                    label.fill-form__label.fill-form__label--select(for="defendant-type-street") 
+                    label.fill-form__label.fill-form__label--select(for="defendant-type-street")
                       span Выберите улицу
-                    .fill-form__select-wrap 
-                      select#defendant-type-street.fill-form__select(name="defendant-type-street")  
+                    .fill-form__select-wrap
+                      select#defendant-type-street.fill-form__select(name="defendant-type-street")
                         option.fill-form__option(value="street" selected) Улица
                         option.fill-form__option(value="boulevard") Бульвар
                         option.fill-form__option(value="travel") Проезд
@@ -203,55 +203,55 @@ block content
                         option.fill-form__option(value="avenue") Проспект
 
                   .box__inner.box__inner--wide
-                    label.fill-form__label 
+                    label.fill-form__label
                       span Название улицы
                       input(type="text" name="defendant-street" placeholder="Название улицы").fill-form__input.input-text
 
-                .fill-form__box.box 
-                  .box__inner.box__inner--half 
-                    label.fill-form__label 
+                .fill-form__box.box
+                  .box__inner.box__inner--half
+                    label.fill-form__label
                       span № дома
                       input(type="text" name="defendant-number-home" placeholder="№ дома").fill-form__input.input-num
 
-                  .box__inner.box__inner--half 
-                    label.fill-form__label 
+                  .box__inner.box__inner--half
+                    label.fill-form__label
                       span № кв.
-                      input(type="text" name="defendant-number-flat" placeholder="№ кв.").fill-form__input.input-num
+                      input(type="text" name="defendant-number-flat" placeholder="№ кв.").fill-form__input.input-num.not_req
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Почтовый индекс
                     input(type="text" name="defendant-post" placeholder="Почтовый индекс").fill-form__input.input-num
-              
+
               fieldset.fill-form__field
                 legend.fill-form__title.size-1 Контактная информация (необязательно)
 
                 .fill-form__box.box
 
                   .box__inner.box__inner--tiny
-                    label.fill-form__label 
+                    label.fill-form__label
                       span телефонный код
                       input(type="text" name="defendant-phone-code" placeholder="+7").fill-form__input.input-code
 
                   .box__inner.box__inner--wide
-                    label.fill-form__label 
+                    label.fill-form__label
                       span телефон ответчика
                       input(type="text" name="defendant-phone" placeholder="(___) ___-__-__").fill-form__input.input-phone
 
               button.fill-form__btn.fill-form__btn--next(type="button") Далее
 
-              p.fill-form__text Нажимая на кнопку вы соглашаетесь с 
-                a.fill-form__ofert(href="files/contract.pdf" target="_blank")  договором-офертой
+              p.fill-form__text Нажимая на кнопку вы соглашаетесь с
+                a.fill-form__ofert(href="politics.html" target="_blank")  договором-офертой
 
             .slider__item
               fieldset.fill-form__field
                 legend.fill-form__title.size-1 Наличие общих несовершеннолетних детей
 
                 .fill-form__box
-                  label.fill-form__label.fill-form__label--select(for="childrens") 
+                  label.fill-form__label.fill-form__label--select(for="childrens")
                     span Количество детей
-                  .fill-form__select-wrap 
-                    select#childrens.fill-form__select(name="childrens")  
+                  .fill-form__select-wrap
+                    select#childrens.fill-form__select(name="childrens")
                       option.fill-form__option(value="1" selected) Один
                       option.fill-form__option(value="2") Два
                       option.fill-form__option(value="3") Три
@@ -259,32 +259,32 @@ block content
               fieldset.fill-form__field.field-children
                 legend.fill-form__title.size-1 Данные несовершеннолетнего ребенка
 
-                .fill-form__box 
-                  label.fill-form__label 
+                .fill-form__box
+                  label.fill-form__label
                     span Фамилия
                     input(type="text" name="1-children-surname" placeholder="Фамилия").fill-form__input.input-text
 
-                .fill-form__box 
-                  label.fill-form__label 
+                .fill-form__box
+                  label.fill-form__label
                     span Имя
                     input(type="text" name="1-children-name" placeholder="Имя").fill-form__input.input-text
 
                 .fill-form__box
-                  label.fill-form__label 
+                  label.fill-form__label
                     span Отчество
                     input(type="text" name="1-children-second-name" placeholder="Отчество").fill-form__input.input-text
 
               fieldset.fill-form__field.field-children
                 legend.fill-form__title.size-1 Дата рождения
 
-                .fill-form__box.box 
+                .fill-form__box.box
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="1-childrens-day") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-day")
                       span День
                     .fill-form__select-wrap
-                      
-                      select#1-childrens-day.fill-form__select(name="1-childrens-day") 
-                        option(value="" selected) День 
+
+                      select#1-childrens-day.fill-form__select(name="1-childrens-day")
+                        option(value="" selected) День
                         - n = 1
                         while n < 32
                           -const num = n++
@@ -292,16 +292,16 @@ block content
 
 
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="1-childrens-month") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-month")
                       span Месяц
                     .fill-form__select-wrap
-                      select#1-childrens-month.fill-form__select(name="1-childrens-month") 
+                      select#1-childrens-month.fill-form__select(name="1-childrens-month")
                         option(value="" selected) Месяц
                         each val, index in months
                           option(value=`${index+ 1}`)= val
 
                   .box__inner--third
-                    label.fill-form__label.fill-form__label--select(for="1-childrens-year") 
+                    label.fill-form__label.fill-form__label--select(for="1-childrens-year")
                       span Год
                     .fill-form__select-wrap
                       select#1-childrens-year.fill-form__select(name="1-childrens-year")
@@ -314,21 +314,15 @@ block content
 
               button.fill-form__btn.fill-form__btn--submit(type="submit") Далее
 
-              p.fill-form__text Нажимая на кнопку вы соглашаетесь с 
-                a.fill-form__ofert(href="files/contract.pdf" target="_blank")  договором-офертой
+              p.fill-form__text Нажимая на кнопку вы соглашаетесь с
+                a.fill-form__ofert(href="politics.html" target="_blank")  договором-офертой
 
 
-                
-        ul.fill__tabs.fill-tabs 
+
+        ul.fill__tabs.fill-tabs
           li.fill-tabs__item
-            button.fill-tabs__btn.fill-tabs__btn--active.size-1.fill-tabs__btn-my(type="button") Ваши данные 
+            button.fill-tabs__btn.fill-tabs__btn--active.size-1.fill-tabs__btn-my(type="button") Ваши данные
           li.fill-tabs__item.fill-tabs__item--disabled
-            button.fill-tabs__btn.size-1.fill-tabs__btn-defendant(type="button") Данные ответчика 
-          li.fill-tabs__item.fill-tabs__item--disabled 
+            button.fill-tabs__btn.size-1.fill-tabs__btn-defendant(type="button") Данные ответчика
+          li.fill-tabs__item.fill-tabs__item--disabled
             button.fill-tabs__btn.size-1.fill-tabs__btn-child(type="button") Данные детей
-                
-                
-
-
-
-

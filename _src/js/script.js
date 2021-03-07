@@ -138,7 +138,7 @@ $(function () {
     let validState = true
     // e.preventDefault()
 
-    $(e.target).parent().find(`input, select`).each((i, item) => {
+    $(e.target).parent().find(`input:not(".not_req"), select`).each((i, item) => {
       $(item).removeClass(`fill-form__input--not-valid`);
       $(item).parent().removeClass(`fill-form__input--not-valid`);
 
@@ -165,13 +165,7 @@ $(function () {
 
 
         // переход на след страницу
-        // const path = $(location).attr('pathname').split(`-`)[0];
 
-        // setTimeout(function () {
-        // window.location.replace(`${path}-step-4.html`);
-
-
-        // }, 1000)
 
       } else {
         e.preventDefault()
