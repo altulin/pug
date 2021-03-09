@@ -168,7 +168,12 @@ $(function () {
 
 
       } else {
-        e.preventDefault()
+        e.preventDefault();
+
+        $([document.documentElement, document.body]).animate({
+          scrollTop: $("#fill").offset().top
+        }, 500);
+
         const indexElem = $(e.target).parent().next().index();
         $($(`.fill-tabs__item`)[indexElem]).removeClass(`fill-tabs__item--disabled`)
 

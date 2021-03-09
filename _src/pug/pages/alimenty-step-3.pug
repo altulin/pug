@@ -7,8 +7,12 @@ block content
 
   -let n = 1;
   -const months = [`январь`, `февраль`, `март`, `апрель`, `май`, `июнь`, `июль`, `август`, `сентябрь`, `октябрь`, `ноябрь`, `декабрь`];
+
   -let start_year = 2003;
-  -const end_year = 2022;
+  -let start_year_efendant = 1940;
+
+  -const end_year = 2023;
+  -const end_year_efendant = 2002;
 
   section.create
     .create__inner.container
@@ -50,7 +54,7 @@ block content
             +img(`hands`, `png`, ``, `card__img`, `71`)
           p.path__text  Получите завяление согласно выбранному тарифному плану
 
-  section.fill
+  section.fill#fill
 
     .fill__inner.container
       h2.fill__title.size-3 Введите данные заявления
@@ -175,8 +179,8 @@ block content
                     .fill-form__select-wrap
                       select#defendant-year.fill-form__select(name="defendant-year")
                         option(value="" selected) Год
-                        while start_year < end_year
-                          -const num = start_year++
+                        while start_year_efendant < end_year_efendant
+                          -const num = start_year_efendant++
                           option(value=`${num}`)= num
 
 
@@ -230,12 +234,12 @@ block content
                   .box__inner.box__inner--tiny
                     label.fill-form__label
                       span телефонный код
-                      input(type="text" name="defendant-phone-code" placeholder="+7").fill-form__input.input-code
+                      input(type="text" name="defendant-phone-code" placeholder="+7").fill-form__input.input-code.not_req
 
                   .box__inner.box__inner--wide
                     label.fill-form__label
                       span телефон ответчика
-                      input(type="text" name="defendant-phone" placeholder="(___) ___-__-__").fill-form__input.input-phone
+                      input(type="text" name="defendant-phone" placeholder="(___) ___-__-__").fill-form__input.input-phone.not_req
 
               button.fill-form__btn.fill-form__btn--next(type="button") Далее
 
