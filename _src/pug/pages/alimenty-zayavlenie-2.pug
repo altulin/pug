@@ -15,115 +15,108 @@ block content
             li.stat-header__sub-item
               span.stat-header__text.bold Взыскатель: 
               u0020
-              span.stat-header__text.stat-my-surname Иванов
+              span.stat-header__text.stat-my-surname {%my-surname%}
               u0020
-              span.stat-header__text.stat-my-name Иван
+              span.stat-header__text.stat-my-name {%my-name%}
               u0020
-              span.stat-header__text.stat-my-second-name Иванович,
+              span.stat-header__text.stat-my-second-name {%my-second-name%},
 
             li.stat-header__sub-item
               span.stat-header__text Адрес:
               u0020 
-              span.stat-header__text.stat-my-city Иркутск
+              span.stat-header__text.stat-my-city г. {%my-city%},
               u0020
-              span.stat-header__text.stat-my-type-street ул.
+              span.stat-header__text.stat-my-type-street {%my-type-street%}
               u0020
-              span.stat-header__text.stat-my-street Иркутская,
+              span.stat-header__text.stat-my-street {%my-street%},
               u0020
-              span.stat-header__text.stat-my-number-home д. 0,
+              span.stat-header__text.stat-my-number-home д. {%my-number-home%},
               u0020
-              span.stat-header__text.stat-my-number-flat кв. 0,
+              span.stat-header__text.stat-my-number-flat кв. {%y-number-flat%},
             
             li.stat-header__sub-item
               span.stat-header__text тел: 
-              span.stat-header__text.stat-my-phone 89021234567
+              span.stat-header__text.stat-my-phone-code {%defendant-phone-code%}
+              u0020
+              span.stat-header__text.stat-my-phone {%my-phone%}
 
           ul.stat-header__sub-list.stat-header__sub-list--my 
             li.stat-header__sub-item
               span.stat-header__text.bold Должник:
               u0020
-              span.stat-header__text.stat-defendant-surname Иванов
+              span.stat-header__text.stat-defendant-surname {%defendant-surname%}
               u0020
-              span.stat-header__text.stat-defendant-name Иван
+              span.stat-header__text.stat-defendant-name {%defendant-name%}
               u0020
-              span.stat-header__text.stat-defendant-second-name Иванович,
+              span.stat-header__text.stat-defendant-second-name {%defendant-second-name%},
 
             li.stat-header__sub-item
-              span.stat-header__text.stat-defendant-day 01.
-              span.stat-header__text.stat-defendant-month 01.
-              span.stat-header__text.stat-defendant-year 2000
+              span.stat-header__text.stat-defendant-day {%defendant-day%}.
+              span.stat-header__text.stat-defendant-month {%defendant-month%}.
+              span.stat-header__text.stat-defendant-year {%defendant-year%}
               u0020
               span.stat-header__text года рождения
 
             li.stat-header__sub-item
               span.stat-header__text Адрес: 
-              span.stat-header__text.stat-defendant-city Иркутск
+              span.stat-header__text.stat-defendant-city г. {%defendant-city%},
               u0020
-              span.stat-header__text.stat-defendant-type-street ул.
+              span.stat-header__text.stat-defendant-type-street {%defendant-type-street%}
               u0020
-              span.stat-header__text.stat-defendant-street Иркутская,
+              span.stat-header__text.stat-defendant-street {%defendant-street%},
               u0020
-              span.stat-header__text.stat-defendant-number-home д. 0,
+              span.stat-header__text.stat-defendant-number-home д. {%defendant-number-home%},
               u0020
-              span.stat-header__text.stat-defendant-number-flat кв. 0,
+              span.stat-header__text.stat-defendant-number-flat кв. {%defendant-number-flat%},
             
             li.stat-header__sub-item
               span.stat-header__text тел: 
-              span.stat-header__text.stat-defendant-phone-code +7
-              span.stat-header__text.stat-defendant-phone 9021234567
+              span.stat-header__text.stat-defendant-phone-code {%defendant-phone-code%}
+              u0020
+              span.stat-header__text.stat-defendant-phone {%defendant-phone%}
               
       h1.stat__title ЗАЯВЛЕНИЕ О ВЫДАЧЕ СУДЕБНОГО ПРИКАЗА
       p.stat__head-text о взыскании алиментов на ребенка 
        
-      p.stat__text
-        span.stat-1-children-surname Иванов
+      p.stat__text.hidden
+        span.stat-1-children-surname {%1-children-surname%}
         u0020
-        span.stat-1-children-name Ивашка
+        span.stat-1-children-name {%1-children-name%}
         u0020
-        span.stat-1-children-second-name Иванович
+        span.stat-1-children-second-name {%1-children-second-name%}
         u0020
-        span.stat-1-childrens-day 01.
-        span.stat-1-childrens-month 01.
-        span.stat-1-childrens-year 2000
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%}
         u0020
         span года рождения, является нашим общим несовершеннолетним ребенком, что подтверждается свидетельством о рождении.
-      p.stat__text Должник полностью самоустранился от содержания нашего ребенка. На сегодняшний день ребенок проживает со мной и находится на моем полном иждивении и материальном содержании.
+      p.stat__text.hidden Должник полностью самоустранился от содержания нашего ребенка. На сегодняшний день ребенок проживает со мной и находится на моем полном иждивении и материальном содержании.
 
-      p.stat__text.hidden
-        span.stat-1-children-surname Иванов
+      p.stat__text
+        span.stat-1-children-surname {%1-children-surname%}
         u0020
-        span.stat-1-children-name Ивашка
+        span.stat-1-children-name {%1-children-name%}
         u0020
-        span.stat-1-children-second-name Иванович
+        span.stat-1-children-second-name {%1-children-second-name%}
         u0020
-        span.stat-1-childrens-day 01.
-        span.stat-1-childrens-month 01.
-        span.stat-1-childrens-year 2000
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%} 
         u0020
-        span года рождения, 
-        span.stat-2-children-surname Иванов
+        span года рождения,
         u0020
-        span.stat-2-children-name Ивашка
+        span.stat-2-children-surname {%2-children-surname%}
         u0020
-        span.stat-2-children-second-name Иванович
+        span.stat-2-children-name {%2-children-name%}
         u0020
-        span.stat-2-childrens-day 01.
-        span.stat-2-childrens-month 01.
-        span.stat-2-childrens-year 2000
+        span.stat-2-children-second-name {%2-children-second-name%}
         u0020
-        span года рождения, 
-        span.stat-3-children-surname Иванов
-        u0020
-        span.stat-3-children-name Ивашка
-        u0020
-        span.stat-3-children-second-name Иванович
-        u0020
-        span.stat-3-childrens-day 01.
-        span.stat-3-childrens-month 01.
-        span.stat-3-childrens-year 2000
+        span.stat-2-childrens-day {%2-childrens-day%}.
+        span.stat-2-childrens-month {%2-childrens-month%}.
+        span.stat-2-childrens-year {%2-childrens-year%}
         u0020
         span года рождения, являются нашими общими несовершеннолетними детьми, что подтверждается свидетельствами о рождении.
-      p.stat__text.hidden Должник полностью самоустранился от содержания наших детей. На сегодняшний день дети проживают со мной и находятся на моем полном иждивении и материальном содержании.
+      p.stat__text Должник полностью самоустранился от содержания наших детей. На сегодняшний день дети проживают со мной и находятся на моем полном иждивении и материальном содержании.
       
 
 
@@ -142,85 +135,52 @@ block content
       
       p.stat__text.stat__text--end Взыскать с должника -
         u0020
-        span.stat-defendant-surname Иванов
+        span.stat-defendant-surname {%defendant-surname%}
         u0020
-        span.stat-defendant-name Иван
+        span.stat-defendant-name {%defendant-name%}
         u0020
-        span.stat-defendant-second-name Иванович,
+        span.stat-defendant-second-name {%defendant-second-name%},
         u0020
-        span.stat-defendant-day 01.
-        span.stat-defendant-month 01.
-        span.stat-defendant-year 2000
-        u0020
-        span года рождения, в мою пользу алименты на содержание несовершеннолетнего ребенка -
-        u0020
-        span.stat-1-children-surname Иванов
-        u0020
-        span.stat-1-children-name Ивашка
-        u0020
-        span.stat-1-children-second-name Иванович
-        u0020
-        span.stat-1-childrens-day 01.
-        span.stat-1-childrens-month 01.
-        span.stat-1-childrens-year 2000
-        u0020
-        span года рождения, в размере 1/4 заработка и (или) иного дохода ежемесячно, начиная с даты подачи настоящего заявления до достижения ребенком совершеннолетия.
-      
-      
-      
-      p.stat__text.stat__text--end.hidden Взыскать с должника -
-        u0020
-        span.stat-defendant-surname Иванов
-        u0020
-        span.stat-defendant-name Иван
-        u0020
-        span.stat-defendant-second-name Иванович,
-        u0020
-        span.stat-defendant-day 01.
-        span.stat-defendant-month 01.
-        span.stat-defendant-year 2000
+        span.stat-defendant-day {%defendant-day%}.
+        span.stat-defendant-month {%defendant-month%}.
+        span.stat-defendant-year {%defendant-year%}
         u0020
         span года рождения, в мою пользу алименты на содержание несовершеннолетних детей -
         u0020
-        span.stat-1-children-surname Иванов
+        span.stat-1-children-surname {%1-children-surname%}
         u0020
-        span.stat-1-children-name Ивашка
+        span.stat-1-children-name {%1-children-name%}
         u0020
-        span.stat-1-children-second-name Иванович
+        span.stat-1-children-second-name {%1-children-second-name%}
         u0020
-        span.stat-1-childrens-day 01.
-        span.stat-1-childrens-month 01.
-        span.stat-1-childrens-year 2000 года рождения,
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%}
         u0020
-        span.stat-2-children-surname Иванов
+        span года рождения,
         u0020
-        span.stat-2-children-name Ивашка
+        span.stat-2-children-surname {%2-children-surname%}
         u0020
-        span.stat-2-children-second-name Иванович
+        span.stat-2-children-name {%2-children-name%}
         u0020
-        span.stat-2-childrens-day 01.
-        span.stat-2-childrens-month 01.
-        span.stat-2-childrens-year 2000 года рождения,
+        span.stat-2-children-second-name {%2-children-second-name%}
         u0020
-        u0020
-        span.stat-3-children-surname Иванов
-        u0020
-        span.stat-3-children-name Ивашка
-        u0020
-        span.stat-3-children-second-name Иванович
-        u0020
-        span.stat-3-childrens-day 01.
-        span.stat-3-childrens-month 01.
-        span.stat-3-childrens-year 2000 года рождения,
+        span.stat-2-childrens-day {%2-childrens-day%}.
+        span.stat-2-childrens-month {%2-childrens-month%}.
+        span.stat-2-childrens-year {%2-childrens-year%}
         u0020
         span года рождения, в размере 1/3 заработка и (или) иного дохода ежемесячно, начиная с даты подачи настоящего заявления до достижения ребенком совершеннолетия.
+      
+      
+      
+      
 
 
       
 
       p.stat__text Приложение:
-      p.stat__text 1. Копия свидетельства о рождении ребенка/детей; 
-      p.stat__text 2. Документ, подтверждающий совместное проживание с ребенком/детьми.
+      p.stat__text 1. Копии свидетельств о рождении детей. 
+      p.stat__text 2. Документ, подтверждающий совместное проживание с детьми.
 
       .stat__signature
         p.stat__date «<span class="stat__space"></span>»<span class="stat__space stat__space--big"></span>2021 года

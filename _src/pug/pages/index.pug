@@ -10,12 +10,14 @@ block content
         p.promo__text.size-2 Опытные юристы по семейным спорам в кратчайшие <br>сроки подготовят вам заявление, которое будет<br> твечать всем требованиям действующего <br>законодательства, а вы получите его не выходя из дома
 
         a.promo__link(href="#marriage")
-          +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
+          //- +img(`marriage`, `png`, `расторжение брака`, `promo__link-img`, `57`)
+          +img(`doc-mob`, `png`, `расторжение брака`, `promo__link-img`, `57`)
           span.promo__link-text.size-5 Заявление в суд<br> о расторжении брака
 
         a.promo__link(href="#alimony")
-          +img(`alimony`, `png`, `аллименты`, `promo__link-img`, `57`)
-          span.promo__link-text.size-5 Заявление в суд о взыскании<br> аллиментов на ребенка
+          //- +img(`alimony`, `png`, `аллименты`, `promo__link-img`, `57`)
+          +img(`doc-mob`, `png`, `аллименты`, `promo__link-img`, `57`)
+          span.promo__link-text.size-5.promo__link--alimony Заявление в суд о&nbsp;взыскании<br> аллиментов на&nbsp;ребенка
     figure.promo__img-wrap
       +img(`promo-bg`, `png`, ``, `promo__img`, `846`)
 
@@ -92,11 +94,11 @@ block content
           figure.faq__img-wrap
             +img(`Iphone`, `png`, ``, `faq__img`, `338`)
           .faq__social.social
-            a.social__link.social__link--tg(href="https://tlgg.ru/Avantage999" target="_blank" rel="noopener") мы в телеграмм
+            a.social__link.social__link--tg(href="https://tlgg.ru/advokat_alexey1" target="_blank" rel="noopener") мы в телеграмм
               +svg(`tg`, `social__tg`)
             //- a.social__link.social__link--viber(href="viber://forward?text=79526199199" target="_blank" rel="noopener") мы в вайбер
             //-   +svg(`viber`, `social__viber`)
-            a.social__link.social__link--whatsapp(href="https://wa.me/79526199199" target="_blank" rel="noopener") мы в вотсап
+            a.social__link.social__link--whatsapp(href="https://api.whatsapp.com/send/?phone=79526199199&text&app_absent=0" target="_blank" rel="noopener") мы в вотсап
               +svg(`wa`, `social__wa`)
 
 

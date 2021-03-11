@@ -1,0 +1,217 @@
+extends ../templates/_statement.pug
+include ../helpers/mixins.pug
+
+block content
+
+  section.stat 
+    .stat__inner 
+      ul.stat__header.stat-header__list
+        li.stat-header__item 
+          p.stat-header__text.bold Мировому судье судебного участка № <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+          span.stat-header__line.bold 
+        li.stat-header__item
+          ul.stat-header__sub-list.stat-header__sub-list--my 
+            li.stat-header__sub-item
+              span.stat-header__text.bold Взыскатель: 
+              u0020
+              span.stat-header__text.stat-my-surname {%my-surname%}
+              u0020
+              span.stat-header__text.stat-my-name {%my-name%}
+              u0020
+              span.stat-header__text.stat-my-second-name {%my-second-name%},
+
+            li.stat-header__sub-item
+              span.stat-header__text Адрес:
+              u0020 
+              span.stat-header__text.stat-my-city г. {%my-city%},
+              u0020
+              span.stat-header__text.stat-my-type-street {%my-type-street%}
+              u0020
+              span.stat-header__text.stat-my-street {%my-street%},
+              u0020
+              span.stat-header__text.stat-my-number-home д. {%my-number-home%},
+              u0020
+              span.stat-header__text.stat-my-number-flat кв. {%y-number-flat%},
+            
+            li.stat-header__sub-item
+              span.stat-header__text тел: 
+              span.stat-header__text.stat-my-phone-code {%defendant-phone-code%}
+              u0020
+              span.stat-header__text.stat-my-phone {%my-phone%}
+
+          ul.stat-header__sub-list.stat-header__sub-list--my 
+            li.stat-header__sub-item
+              span.stat-header__text.bold Должник:
+              u0020
+              span.stat-header__text.stat-defendant-surname {%defendant-surname%}
+              u0020
+              span.stat-header__text.stat-defendant-name {%defendant-name%}
+              u0020
+              span.stat-header__text.stat-defendant-second-name {%defendant-second-name%},
+
+            li.stat-header__sub-item
+              span.stat-header__text.stat-defendant-day {%defendant-day%}.
+              span.stat-header__text.stat-defendant-month {%defendant-month%}.
+              span.stat-header__text.stat-defendant-year {%defendant-year%}
+              u0020
+              span.stat-header__text года рождения
+
+            li.stat-header__sub-item
+              span.stat-header__text Адрес: 
+              span.stat-header__text.stat-defendant-city г. {%defendant-city%},
+              u0020
+              span.stat-header__text.stat-defendant-type-street {%defendant-type-street%}
+              u0020
+              span.stat-header__text.stat-defendant-street {%defendant-street%},
+              u0020
+              span.stat-header__text.stat-defendant-number-home д. {%defendant-number-home%},
+              u0020
+              span.stat-header__text.stat-defendant-number-flat кв. {%defendant-number-flat%},
+            
+            li.stat-header__sub-item
+              span.stat-header__text тел: 
+              span.stat-header__text.stat-defendant-phone-code {%defendant-phone-code%}
+              u0020
+              span.stat-header__text.stat-defendant-phone {%defendant-phone%}
+              
+      h1.stat__title ЗАЯВЛЕНИЕ О ВЫДАЧЕ СУДЕБНОГО ПРИКАЗА
+      p.stat__head-text о взыскании алиментов на ребенка 
+       
+      p.stat__text.hidden
+        span.stat-1-children-surname {%1-children-surname%}
+        u0020
+        span.stat-1-children-name {%1-children-name%}
+        u0020
+        span.stat-1-children-second-name {%1-children-second-name%}
+        u0020
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%}
+        u0020
+        span года рождения, является нашим общим несовершеннолетним ребенком, что подтверждается свидетельством о рождении.
+      p.stat__text.hidden Должник полностью самоустранился от содержания нашего ребенка. На сегодняшний день ребенок проживает со мной и находится на моем полном иждивении и материальном содержании.
+
+      p.stat__text
+        span.stat-1-children-surname {%1-children-surname%}
+        u0020
+        span.stat-1-children-name {%1-children-name%}
+        u0020
+        span.stat-1-children-second-name {%1-children-second-name%}
+        u0020
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%} 
+        u0020
+        span года рождения,
+        u0020
+        span.stat-2-children-surname {%2-children-surname%}
+        u0020
+        span.stat-2-children-name {%2-children-name%}
+        u0020
+        span.stat-2-children-second-name {%2-children-second-name%}
+        u0020
+        span.stat-2-childrens-day {%2-childrens-day%}.
+        span.stat-2-childrens-month {%2-childrens-month%}.
+        span.stat-2-childrens-year {%2-childrens-year%}
+        u0020
+        span года рождения,
+        u0020
+        span.stat-3-children-surname {%3-children-surname%}
+        u0020
+        span.stat-3-children-name {%3-children-name%}
+        u0020
+        span.stat-3-children-second-name {%3-children-second-name%}
+        u0020
+        span.stat-3-childrens-day {%3-childrens-day%}.
+        span.stat-3-childrens-month {%3-childrens-month%}.
+        span.stat-3-childrens-year {%3-childrens-year%}
+        u0020
+        span года рождения, являются нашими общими несовершеннолетними детьми, что подтверждается свидетельствами о рождении.
+      p.stat__text Должник полностью самоустранился от содержания наших детей. На сегодняшний день дети проживают со мной и находятся на моем полном иждивении и материальном содержании.
+      
+
+
+
+
+      p.stat__text Соглашения об уплате алиментов нам достигнуть не удалось. О других детях должника, на которых он обязан был бы уплачивать алименты, мне не известно.
+      p.stat__text Статья 80 Семейного кодекса РФ закрепляет обязанность родителей содержать своих несовершеннолетних детей. В случае, если родители не предоставляют содержание своим несовершеннолетним детям, средства на содержание несовершеннолетних детей (алименты) взыскиваются с родителей в судебном порядке.
+      p.stat__text В силу норм семейного права, под алиментами понимаются средства на содержание, которые в предусмотренных законом случаях одни члены семьи обязаны уплачивать в пользу других членов семьи.
+      p.stat__text Таким образом, вышеизложенное констатирует, что алименты являются важным (а иногда главным или даже единственным) источником обеспечения существования несовершеннолетних детей как нетрудоспособных и находящихся на иждивении родителей в силу своего возраста. Поэтому обязанность родителей содержать своих несовершеннолетних детей, то есть детей, не достигших восемнадцати лет, не вызывает сомнений и традиционно закрепляется в семейном законодательстве – в Семейном кодексе РФ.
+      p.stat__text Статьей 27 Конвенции о правах ребенка предусмотрено, что государства - участники признают право каждого ребенка на уровень жизни, необходимый для физического, умственного, духовного, нравственного и социального развития ребенка.
+      p.stat__text Родитель(и) или другие лица, воспитывающие ребенка, несут основную ответственность за обеспечение в пределах своих способностей и финансовых возможностей условий жизни, необходимых для развития ребенка.
+      p.stat__text Согласно пункту 3 Постановления Пленума Верховного Суда РФ от 26.12.2017 г. № 56 «О применении судами законодательства при рассмотрении дел, связанных со взысканием алиментов» в соответствии с абзацем пятым статьи 122 Гражданского процессуального кодекса РФ судья вправе выдать судебный приказ, если заявлено требование о взыскании алиментов на несовершеннолетних детей, не связанное с установлением отцовства, оспариванием отцовства (материнства) или необходимостью привлечения других заинтересованных лиц.
+      p.stat__text.stat__text--end На основании изложенного и руководствуясь статьями 80, 81 Семейного кодекса РФ, статьями 121-124, 126 Гражданского процессуального кодекса РФ
+
+      p.stat__beg.bold ПРОШУ СУД:
+      
+      p.stat__text.stat__text--end Взыскать с должника -
+        u0020
+        span.stat-defendant-surname {%defendant-surname%}
+        u0020
+        span.stat-defendant-name {%defendant-name%}
+        u0020
+        span.stat-defendant-second-name {%defendant-second-name%},
+        u0020
+        span.stat-defendant-day {%defendant-day%}.
+        span.stat-defendant-month {%defendant-month%}.
+        span.stat-defendant-year {%defendant-year%}
+        u0020
+        span года рождения, в мою пользу алименты на содержание несовершеннолетних детей -
+        u0020
+        span.stat-1-children-surname {%1-children-surname%}
+        u0020
+        span.stat-1-children-name {%1-children-name%}
+        u0020
+        span.stat-1-children-second-name {%1-children-second-name%}
+        u0020
+        span.stat-1-childrens-day {%1-childrens-day%}.
+        span.stat-1-childrens-month {%1-childrens-month%}.
+        span.stat-1-childrens-year {%1-childrens-year%}
+        u0020
+        span года рождения,
+        u0020
+        span.stat-2-children-surname {%2-children-surname%}
+        u0020
+        span.stat-2-children-name {%2-children-name%}
+        u0020
+        span.stat-2-children-second-name {%2-children-second-name%}
+        u0020
+        span.stat-2-childrens-day {%2-childrens-day%}.
+        span.stat-2-childrens-month {%2-childrens-month%}.
+        span.stat-2-childrens-year {%2-childrens-year%}
+        u0020
+        span года рождения,
+        u0020
+        span.stat-3-children-surname {%3-children-surname%}
+        u0020
+        span.stat-3-children-name {%3-children-name%}
+        u0020
+        span.stat-3-children-second-name {%3-children-second-name%}
+        u0020
+        span.stat-3-childrens-day {%3-childrens-day%}.
+        span.stat-3-childrens-month {%3-childrens-month%}.
+        span.stat-3-childrens-year {%3-childrens-year%}
+        u0020
+        span года рождения, в размере 1/3 заработка и (или) иного дохода ежемесячно, начиная с даты подачи настоящего заявления до достижения ребенком совершеннолетия.
+      
+      
+      
+      
+
+
+      
+
+      p.stat__text Приложение:
+      p.stat__text 1. Копии свидетельств о рождении детей. 
+      p.stat__text 2. Документ, подтверждающий совместное проживание с детьми.
+
+      .stat__signature
+        p.stat__date «<span class="stat__space"></span>»<span class="stat__space stat__space--big"></span>2021 года
+        p.stat__date <span class="stat__space stat__space--big"></span>/<span class="stat__space stat__space--big"></span>/
+
+
+
+
+          
+

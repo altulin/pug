@@ -41,7 +41,7 @@
     padding-top: 16px
     padding-bottom: 16px
     padding-left: 90px
-    padding-right: 20px
+    padding-right: 15px
     position: relative
     border-radius: 10px
     border: 1px solid #F3E0CF
@@ -49,8 +49,9 @@
 
     +mw(600)
       width: 100%
+      padding-left: 75px
 
-      & br
+      &--alimony br
         display: none
 
     & + a
@@ -59,8 +60,10 @@
   &__link-img
     display: block
     position: absolute
-    bottom: 0
+    top: 52%
+    transform: translateY(-50%)
     left: 13px
+    display: block
 
   &__link-text
     font-weight: 500

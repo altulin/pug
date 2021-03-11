@@ -215,6 +215,7 @@ function buildcopy() {
     path.src.fonts,
     path.src.min_js,
     path.src.js,
+    `${sourceFolder}/js/modules/*.js`,
     path.src.img,
     path.src.html,
     path.src.ico,
